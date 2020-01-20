@@ -156,16 +156,31 @@ section {
     font-size: 1.25rem;
 }
 
-#projects, #languages, #frameworks, #platforms, #testimonials {
+.container {
     display:flex;
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+    
 }
 
 #stack {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
 
+#stack>div:first-child {
+    flex: 1;
+    padding: 24px;
+    border-right: 1px solid #999;
+    min-width: 300px;
+    font-size: 1.125rem;
+    background-color: white;
+}
+#stack>div:last-child {
+    flex: 5
 }
 
 .testimonial-card {
@@ -246,4 +261,83 @@ h3 {
 .simple-card img {
     width: 64px;
     height: auto;
+}
+
+#about {
+    background-color: black;
+}
+
+.about-grid{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+.about-grid-row{
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.about-cell {
+    flex: 1;
+    color: #ddd;
+    margin:24px;
+    padding: 16px;
+    width: 312px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: inset 0 0px 5px #10809f;
+    border-radius: 5px;
+}
+
+.about-cell h3, .team-card h3 {
+    font-size: 2rem;
+}
+
+.about-cell p, .team-card p {
+    line-height: 1.25;
+    font-size: 1.125rem;
+
+}
+
+
+.team-card {
+    margin: 36px;
+    width: 312px;
+    background-color:white;
+    border-radius:8px;
+    box-shadow: 0px 2px 4px #999,
+                    0px 0px 16px #ccc;
+}
+
+.team-card > div {
+    margin: 0px 16px 16px 16px;
+}
+
+.team-card img{
+    width: 100%;
+    height: auto;
+}
+
+.team-contact {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+}
+
+.team-contact i {
+    display: inline-block
+}
+
+.team-contact img {
+    width:48px;
+    height: auto;
+}
+
+.team-contact a {
+    text-decoration: none;
+    color: #333;
 }

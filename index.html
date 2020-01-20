@@ -15,17 +15,28 @@
 </head>
 
 <body>
-    <div class="nav">
-        <ul>
-            <li><a href="#hero">Home</a></li>
-            <li><a href="#services">What we do</a></li>
-            <li><a href="#projects">What we've done</a></li>
-            <li><a href="#testimonials">What others say</a></li>
-            <li><a href="#about">What we are about</a></li>
-            <li><a href="#the-team">Who we are</a></li>
-            <li><a href="#stack">What we use</a></li>
-        </ul>
+    
+    <div class="nav " id='nav'>
+        <div class="nav-header">
+            <div class='animated-button' onclick='showNav()'>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <img src="static/images/logo/gonc.png" alt="">
 
+        </div>
+        <div class="nav-content">
+            <ul>
+                <li><span onclick="scrollPageTo('hero')"> <i class="fa fa-home" aria-hidden="true"></i> Home</span></li>
+                <li><span onclick="scrollPageTo('services')"> <i class="fa fa-cogs" aria-hidden="true"></i> What we do</span></li>
+                <li><span onclick="scrollPageTo('projects')"> <i class="fa fa-clock" aria-hidden="true"></i> What we've done</span></li>
+                <li><span onclick="scrollPageTo('testimonials')"> <i class="fa fa-quote-left" aria-hidden="true"></i> What others say</span></li>
+                <li><span onclick="scrollPageTo('about')"> <i class="fa fa-question-circle" aria-hidden="true"></i> What we are about</span></li>
+                <li><span onclick="scrollPageTo('the-team')"> <i class="fa fa-users" aria-hidden="true"></i> Who we are</span></li>
+                <li><span onclick="scrollPageTo('stack')"> <i class="fa fa-wrench" aria-hidden="true"></i> What we use</span></li>
+            </ul>
+        </div>
     </div>
     <main>
 
@@ -337,7 +348,7 @@
         <footer>
             <img src="static/images/logo/gonc.png" alt="">
                 <p>Icons made by <a href="https://www.flaticon.com/authors/smashicons" title="Smashicons">Smashicons</a> from <a
-                    href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a></p>
+                    href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</span></p>
         <p>Icons made by <a href="https://www.flaticon.com/authors/prettycons" title="prettycons">prettycons</a> from <a
             href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a></p>
         <p>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a

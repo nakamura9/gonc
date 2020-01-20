@@ -26,13 +26,16 @@ main {
 section {
     min-height: 100vh;
     position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     /* transition: transform 0.6s ease-in-out; */
 }
 
-section>h1 {
-    position: absolute;
+section>div:first-child>h1, section>div:last-child>h1  {
+    /* position: absolute;
     left: 24px;
-    top: 48px;
+    top: 48px; */
     font-size: 6rem;
     font-weight: 900;
     font-family: "Titillium Web" sans-serif;
@@ -464,9 +467,9 @@ h3 {
     background-color: #10809f;
 }
 
-#projects >div {
+#projects .container {
     width: 75%;
-    margin: 0 auto;
+    margin: 0px auto;
 }
 
 .project-card {

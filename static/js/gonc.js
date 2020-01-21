@@ -18,7 +18,3 @@ function showNav(){
     var nav = document.getElementById('nav');
     nav.classList.toggle('nav-visible')
 }
-
-window.onload = function(){
-    
-}

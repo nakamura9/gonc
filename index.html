@@ -4,7 +4,7 @@
 <head>
     <title>GonC Development Services</title>
     <meta name="charset" value="utf-8">
-    
+
     <meta name="description" value="{{description}}">
     <meta name="viewport" value="width=device-width, initial-scale=1.0">
     <meta name="author" value="Caleb Kandoro Godwin Chinonzo">
@@ -15,9 +15,9 @@
 </head>
 
 <body>
-    
-    <div class="nav " id='nav'>
-        <!-- <div class="nav-header">
+
+    <!-- <div class="nav " id='nav'>
+         <div class="nav-header">
             <div class='animated-button' onclick='showNav()'>
                 <span></span>
                 <span></span>
@@ -25,7 +25,7 @@
             </div>
             <img src="static/images/logo/gonc.png" alt="">
 
-        </div> -->
+        </div> 
         <div class="nav-content">
             <ul>
                 <li><span onclick="scrollPageTo('hero')"> <i class="fa fa-home" aria-hidden="true"></i> Home</span></li>
@@ -37,26 +37,27 @@
                 <li><span onclick="scrollPageTo('stack')"> <i class="fa fa-wrench" aria-hidden="true"></i> What we use</span></li>
             </ul>
         </div>
-    </div>
+    </div> -->
     <main>
 
-        <section  id="hero">
+        <section id="hero">
             <!-- <h1>Hero</h1> -->
             <div class="hero-background">
                 <div><img src="static/images/bg.png" alt="code background"> </div>
             </div>
             <div class="hero__foreground-text">
-                <p><!-- <img src="static/images/logo/gonc.png" alt="Gonc Logo" width>  -->
-                   GONC Development Services <br />
+                <p>
+                    <!-- <img src="static/images/logo/gonc.png" alt="Gonc Logo" width>  -->
+                    GONC Development Services <br />
                     <span>Let's Tell your story!</span></p>
-                
+
             </div>
         </section>
         <section id="services">
-            <div>
+            <div class='left'>
                 <h1>What <br> We <br> Do</h1>
             </div>
-            <div class='container' >
+            <div class='container'>
                 <div class="card">
 
                     <div class="card-body">
@@ -72,7 +73,7 @@
                     </div>
                 </div>
                 <div class="card">
-    
+
                     <div class="card-body">
                         <img src="static/images/android-character.png" alt="Develop websites">
                         <h4>Mobile App Development</h4>
@@ -85,7 +86,7 @@
                     </div>
                 </div>
                 <div class="card">
-    
+
                     <div class="card-body">
                         <img src="static/images/window.png" alt="Develop websites">
                         <h4>Desktop Applications Development</h4>
@@ -98,12 +99,13 @@
                     </div>
                 </div>
             </div>
-            <div></div>
+            <div class='right'></div>
         </section>
         <section id="projects">
-            <div>
+            <div class='left'>
+                <h1 class='heading-left-right white'>What <br> We've <br> Done</h1>
             </div>
-            
+
             <div class='container'>
                 <div class='project-card'>
                     <!-- <img src="static/images/projects/adventureszw.png" alt=""> -->
@@ -134,7 +136,7 @@
                 </div>
                 <div class='project-card'>
                     <div class='project-img'></div>
-                    
+
                     <div class='project-content'>
                         <img src="static/images/projects/mdvr_plus-logo.png" alt="">
                         <h4>MDVR+ </h4>
@@ -155,14 +157,14 @@
                     <div class='project-img'></div>
                     <div class='project-content'>
                         <img src="static/images/projects/iso-logo.png" alt="">
-    
+
                         <h4>Isocal Calibration</h4>
                         <p>Created mobile app to assist instrument calibration</p>
                         <a href="">Learn More</a>
                     </div>
                 </div>
             </div>
-            <div>
+            <div class='right'>
                 <h1 class='heading-left white'>What <br> We've <br> Done</h1>
             </div>
 
@@ -170,85 +172,101 @@
         </section>
         <section class='container' id="testimonials">
             <!-- <h1 class="scrolling">What others say</h1> -->
-            <div>
+            <div class='left'>
                 <h1>What <br> Others <br> Say</h1>
             </div>
-            
+
             <div class='container'>
-            <div class="testimonial-card">
-                <div class="testimonial-card__content">
-                    <p><i class="fa fa-quote-left" aria-hidden="true"></i></p>
-                    <p class='testimonial-text'>Gonc leverages innovative solutions to help our organization grow and reach our goals</p>
-                    <p class='testimonial-person'>-Nolwazi, <b>Adventureszw</b></p>
-                    <p class='testimonial-card__lower-icon'><i class="fa fa-quote-right " aria-hidden="true"></i></p>
-                </div>
-                <div class="testimonial-card__image" style='background-image:url(static/images/logo/flask.jpg)'>
-                    
-                </div>
-            </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-card__content">
+                        <p><i class="fa fa-quote-left" aria-hidden="true"></i></p>
+                        <p class='testimonial-text'>Gonc leverages innovative solutions to help our organization grow
+                            and reach our goals</p>
+                        <p class='testimonial-person'>-Nolwazi, <b>Adventureszw</b></p>
+                        <p class='testimonial-card__lower-icon'><i class="fa fa-quote-right " aria-hidden="true"></i>
+                        </p>
+                    </div>
+                    <div class="testimonial-card__image" style='background-image:url(static/images/logo/flask.jpg)'>
 
-            <div class="testimonial-card">
-                <div class="testimonial-card__content">
-                    <p><i class="fa fa-quote-left" aria-hidden="true"></i></p>
-                    <p class='testimonial-text'>I'm ecstatic to have had the chance to work with Gonc on my website. They communicated brilliantly and really delivered on the project. I reccomend them to anyone who wants a site.</p>
-                    <p class='testimonial-person'>-Gerald, <b>Charming Imagez</b></p>
-                    <p class='testimonial-card__lower-icon'><i class="fa fa-quote-right " aria-hidden="true"></i></p>
+                    </div>
                 </div>
-                <div class="testimonial-card__image"  style='background-image:url(static/images/logo/flask.jpg)'></div>
-            </div>
 
-            <div class="testimonial-card">
-                <div class="testimonial-card__content">
-                    <p><i class="fa fa-quote-left" aria-hidden="true"></i></p>
-                    <p class='testimonial-text'>The extent of Gonc's expertise is staggering. They deliver on a comprehensive feature set!</p>
-                    <p class='testimonial-person'>-Last, <b>Latrom</b></p>
-                    <p class='testimonial-card__lower-icon' ><i class="fa fa-quote-right " aria-hidden="true"></i></p>
+                <div class="testimonial-card">
+                    <div class="testimonial-card__content">
+                        <p><i class="fa fa-quote-left" aria-hidden="true"></i></p>
+                        <p class='testimonial-text'>I'm ecstatic to have had the chance to work with Gonc on my website.
+                            They communicated brilliantly and really delivered on the project. I reccomend them to
+                            anyone who wants a site.</p>
+                        <p class='testimonial-person'>-Gerald, <b>Charming Imagez</b></p>
+                        <p class='testimonial-card__lower-icon'><i class="fa fa-quote-right " aria-hidden="true"></i>
+                        </p>
+                    </div>
+                    <div class="testimonial-card__image" style='background-image:url(static/images/logo/flask.jpg)'>
+                    </div>
                 </div>
-                <div class="testimonial-card__image"  style='background-image:url(static/images/logo/flask.jpg)'></div>
-            </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-card__content">
+                        <p><i class="fa fa-quote-left" aria-hidden="true"></i></p>
+                        <p class='testimonial-text'>The extent of Gonc's expertise is staggering. They deliver on a
+                            comprehensive feature set!</p>
+                        <p class='testimonial-person'>-Last, <b>Latrom</b></p>
+                        <p class='testimonial-card__lower-icon'><i class="fa fa-quote-right " aria-hidden="true"></i>
+                        </p>
+                    </div>
+                    <div class="testimonial-card__image" style='background-image:url(static/images/logo/flask.jpg)'>
+                    </div>
+                </div>
 
             </div>
-            <div></div>
+            <div class='right'></div>
         </section>
         <section class='container' id="about">
             <!-- <h1>Who we are</h1> -->
-            <div></div>
+            <div class='left'>
+                <h1 class='heading-left-right white'>What <br> We're <br> About</h1>
+
+            </div>
             <div class="about-grid">
                 <div class="about-grid-row">
                     <div class="about-cell">
                         <h3><i class="fas fa-rocket "></i></h3>
                         <h3>Our Mission</h3>
-                        <p>We are driven to provide world class software solutions one client at a time.This is another sentence to make the page look sensible</p>
+                        <p>We are driven to provide world class software solutions one client at a time.This is another
+                            sentence to make the page look sensible</p>
 
                     </div>
                     <div class="about-cell">
                         <h3><i class="fas fa-heart  "></i></h3>
 
                         <h3>Our Passion</h3>
-                        <p>Functional Beauty. We love technology, and want to bring its joys to as many people as possible.</p>
+                        <p>Functional Beauty. We love technology, and want to bring its joys to as many people as
+                            possible.</p>
                     </div>
                 </div>
                 <div class="about-grid-row">
                     <div class="about-cell">
                         <h3><i class="fas fa-dumbbell "></i></h3>
                         <h3>Our Strength</h3>
-                        <p>We believe that we can capture inspiration and put it to code. Whether it is enterprise solutions or captivating web content, we are your gateway to a larger digital footprint.</p>
+                        <p>We believe that we can capture inspiration and put it to code. Whether it is enterprise
+                            solutions or captivating web content, we are your gateway to a larger digital footprint.</p>
                     </div>
                     <div class="about-cell">
                         <h3><i class="fas fa-certificate  "></i></h3>
 
                         <h3>Our Promise</h3>
-                        <p>At Gonc, we promise to elevate your business and personal projects and help you along your journey to digital dominance</p>
+                        <p>At Gonc, we promise to elevate your business and personal projects and help you along your
+                            journey to digital dominance</p>
                     </div>
                 </div>
             </div>
-            <div>
+            <div class='right'>
                 <h1 class='heading-left white'>What <br> We're <br> About</h1>
 
             </div>
         </section>
         <section class='container' id="the-team">
-            <div>
+            <div class='left'>
                 <h1>Who <br> We <br> Are</h1>
             </div>
             <div class="container">
@@ -256,8 +274,11 @@
                     <img src="static/images/team/gonk.png" alt="">
                     <div>
                         <h3>Godwin</h3>
-                        <p>Godwin, poet and adventurer extraordinnaire. Devoted husband and all around people person. An accomplished athlete, Godwin has always had a knack for organizing.</p>
-                        <p>He is an economist by training but has come to love a new kind of poetry, the ebb and flow of graphics on a computer screen. His passion is to use the ugly syntax of html and css to make art on displays to rival Rembrant.</p>
+                        <p>Godwin, poet and adventurer extraordinnaire. Devoted husband and all around people person. An
+                            accomplished athlete, Godwin has always had a knack for organizing.</p>
+                        <p>He is an economist by training but has come to love a new kind of poetry, the ebb and flow of
+                            graphics on a computer screen. His passion is to use the ugly syntax of html and css to make
+                            art on displays to rival Rembrant.</p>
                         <div class="team-contact">
                             <i class="fab fa-github fa-3x" aria-hidden="true"></i>
                             <i class="fab fa-linkedin fa-3x" aria-hidden="true"></i>
@@ -268,116 +289,133 @@
                     <img src="static/images/team/caleb.png" alt="">
                     <div>
                         <h3>Caleb</h3>
-                        <p>Caleb is a technician at heart, from infancy he knew the inside of a desktop tower. Always curious, he is fascinated with how things work and is always probing at systems.</p>
-                        <p>He started with an electrical engineering background but grew in his love for all things code, developing a special fondness for the python programming language.</p>
+                        <p>Caleb is a technician at heart, from infancy he knew the inside of a desktop tower. Always
+                            curious, he is fascinated with how things work and is always probing at systems.</p>
+                        <p>He started with an electrical engineering background but grew in his love for all things
+                            code, developing a special fondness for the python programming language.</p>
                         <div class="team-contact">
-                            <a href="https://github.com/nakamura9"><i class="fab fa-github fa-3x" aria-hidden="true"></i></a>
-                            <a href="https://www.linkedin.com/in/caleb-kandoro-7b139763"><i class="fab fa-linkedin fa-3x" aria-hidden="true"></i></a>
-                            <a href=" https://www.fiverr.com/nakamura9a"><img src="static/images/logo/fiverr.png" alt="fiverr"></a>
-                            <a href="https://www.upwork.com/o/profiles/users/_~01b4d726706f8f8bb1/"><img style='margin-top:8px;' src="static/images/logo/upwork.png" alt="upwork"></a>
+                            <a href="https://github.com/nakamura9"><i class="fab fa-github fa-3x"
+                                    aria-hidden="true"></i></a>
+                            <a href="https://www.linkedin.com/in/caleb-kandoro-7b139763"><i
+                                    class="fab fa-linkedin fa-3x" aria-hidden="true"></i></a>
+                            <a href=" https://www.fiverr.com/nakamura9a"><img src="static/images/logo/fiverr.png"
+                                    alt="fiverr"></a>
+                            <a href="https://www.upwork.com/o/profiles/users/_~01b4d726706f8f8bb1/"><img
+                                    style='margin-top:8px;' src="static/images/logo/upwork.png" alt="upwork"></a>
                         </div>
                     </div>
                 </div>
             </div>
-            <div></div>
-            
+            <div class='right'></div>
+
         </section>
         <div id='stack-text'>
-            <p>Much can be learned of a craftsman, from the tools he chooses to use. At GOnc, our developers use cutting edge tools and leverage expertise in the following frameworks and languages to meet the needs of our customers.</p>
+            <p>Much can be learned of a craftsman, from the tools he chooses to use. At GOnc, our developers use cutting
+                edge tools and leverage expertise in the following frameworks and languages to meet the needs of our
+                customers.</p>
         </div>
-        <section  id='stack'>
+        <section id='stack'>
             <!-- <h1>What we use</h1>f -->
 
-            
-            <div></div>
 
-            <div>
+            <div class='left'>
+                <h1 class='heading-left-right'>What <br> We <br> Use</h1>
+
+            </div>
+
+            <div id='stack-content'>
                 <h3>Languages</h3>
-            <div id="languages" class='container'>
-                <div class='simple-card'>
-                    <i class="fab fa-python fa-align-center fa-2x  "></i>
-                    <h5>Python</h5>
-                    <p>Python is an immensely popular programming language that is cross platform, ideal for web programming and machine learning</p>
-                </div>
-                <div class='simple-card'>
-                    <i class="fab fa-js  fa-2x  "></i>
-                    <h5>Javascript</h5>
-                    <p>Quite simply the language of the web, javascript dominates the internet landscape and is the cornerstone of web 2.0</p>
-                </div>
-                <div class='simple-card'>
-                    <h1>C</h1>
-                    <h5>The C programming language</h5>
-                    <p>A systems programming language idea for embedded applications, like microcontrollers</p>
-                </div>
-            </div>
-
-            <h3>Frameworks</h3>
-            <div id="frameworks" class='container'>
-                <div  class='simple-card'>
-                    <img src="static/images/logo/django.png" alt="">
-                    <h5>Django</h5>
-                    <p>Django is a comprehensive web development framework that allows for rapid prototyping. Ideal for data heavy projects like e-commerce sites.</p>
-                </div>
-                <div  class='simple-card'>
-                    <i class="fab fa-react fa-3x  "></i>
-                    <h5>React</h5>
-                    <p>React is a javascript framework designed for making single page applications. It is highly performant and optimized.</p>
-                </div>
-                <div class='simple-card'>
-                    <i class="fab fa-react fa-3x  "></i>
-                    <h5>React Native</h5>
-                    <p>An extension of the react framework focused on mobile platforms. Can incorporate native code to enable almost any functionality.</p>
-                </div>
-                <div class='simple-card'>
-                    <img src="static/images/logo/flask.jpg" alt="">
-                    <h5>Flask</h5>
-                    <p>A python web microframework that allows developers to customize their tech stack to meet their needs.</p>
-                </div>
-            </div>
-            <h3>Platforms</h3>
-                <div id="platforms" class='container'>
+                <div id="languages" class='row'>
                     <div class='simple-card'>
-                    <i class="fab fa-windows fa-3x" aria-hidden="true"></i>
-                    <h4>Windows</h4>
-                    <p>The most popular desktop operating system running on over a billion machines</p>
-                </div class='simple-card'>
-
-                <div class='simple-card'>
-                    <i class="fab fa-android fa-3x" aria-hidden="true"></i>
-                    <h4>Android</h4>
-                    <p>The most widely used mobile platform with over 2 billion active devices</p>
+                        <i class="fab fa-python fa-align-center fa-2x  "></i>
+                        <h5>Python</h5>
+                        <p>Python is an immensely popular programming language that is cross platform, ideal for web
+                            programming and machine learning</p>
+                    </div>
+                    <div class='simple-card'>
+                        <i class="fab fa-js  fa-2x  "></i>
+                        <h5>Javascript</h5>
+                        <p>Quite simply the language of the web, javascript dominates the internet landscape and is the
+                            cornerstone of web 2.0</p>
+                    </div>
+                    <div class='simple-card'>
+                        <h1>C</h1>
+                        <h5>The C programming language</h5>
+                        <p>A systems programming language idea for embedded applications, like microcontrollers</p>
+                    </div>
                 </div>
 
-                <div class='simple-card'>
-                    <img src="static/images/logo/raspberrypi.png" alt="">
-                    <h4>Raspberry Pi</h4>
-                    <p>A low cost linux based microcomputer that supports hardware interfaces.</p>
+                <h3>Frameworks</h3>
+                <div id="frameworks" class='row'>
+                    <div class='simple-card'>
+                        <img src="static/images/logo/django.png" alt="">
+                        <h5>Django</h5>
+                        <p>Django is a comprehensive web development framework that allows for rapid prototyping. Ideal
+                            for data heavy projects like e-commerce sites.</p>
+                    </div>
+                    <div class='simple-card'>
+                        <i class="fab fa-react fa-3x  "></i>
+                        <h5>React</h5>
+                        <p>React is a javascript framework designed for making single page applications. It is highly
+                            performant and optimized.</p>
+                    </div>
+                    <div class='simple-card'>
+                        <i class="fab fa-react fa-3x  "></i>
+                        <h5>React Native</h5>
+                        <p>An extension of the react framework focused on mobile platforms. Can incorporate native code
+                            to enable almost any functionality.</p>
+                    </div>
+                    <div class='simple-card'>
+                        <img src="static/images/logo/flask.jpg" alt="">
+                        <h5>Flask</h5>
+                        <p>A python web microframework that allows developers to customize their tech stack to meet
+                            their needs.</p>
+                    </div>
                 </div>
+                <h3>Platforms</h3>
+                <div id="platforms" class='row'>
+                    <div class='simple-card'>
+                        <i class="fab fa-windows fa-3x" aria-hidden="true"></i>
+                        <h4>Windows</h4>
+                        <p>The most popular desktop operating system running on over a billion machines</p>
+                    </div class='simple-card'>
 
-                <div class='simple-card'>
-                    <img src="static/images/logo/arduino.png" alt="">
-                    <h4>Ardruino</h4>
-                    <p>A low power, integrated circuit platform for hardware development.</p>
-                </div>
+                    <div class='simple-card'>
+                        <i class="fab fa-android fa-3x" aria-hidden="true"></i>
+                        <h4>Android</h4>
+                        <p>The most widely used mobile platform with over 2 billion active devices</p>
+                    </div>
+
+                    <div class='simple-card'>
+                        <img src="static/images/logo/raspberrypi.png" alt="">
+                        <h4>Raspberry Pi</h4>
+                        <p>A low cost linux based microcomputer that supports hardware interfaces.</p>
+                    </div>
+
+                    <div class='simple-card'>
+                        <img src="static/images/logo/arduino.png" alt="">
+                        <h4>Ardruino</h4>
+                        <p>A low power, integrated circuit platform for hardware development.</p>
+                    </div>
                 </div>
             </div>
-            <div>
+            <div class='right'>
                 <h1 class='heading-left'>What <br> We <br> Use</h1>
             </div>
-            
+
 
 
         </section>
         <footer>
             <img src="static/images/logo/gonc.png" alt="">
-                <p>Icons made by <a href="https://www.flaticon.com/authors/smashicons" title="Smashicons">Smashicons</a> from <a
-                    href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</span></p>
-        <p>Icons made by <a href="https://www.flaticon.com/authors/prettycons" title="prettycons">prettycons</a> from <a
-            href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a></p>
-        <p>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a
-            href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a></p>
+            <p>Icons made by <a href="https://www.flaticon.com/authors/smashicons" title="Smashicons">Smashicons</a>
+                from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</span></p>
+            <p>Icons made by <a href="https://www.flaticon.com/authors/prettycons" title="prettycons">prettycons</a>
+                from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a></p>
+            <p>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a
+                    href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a></p>
         </footer>
-        
+
     </main>
 
     <script src="static/js/gonc.js"></script>

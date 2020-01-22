@@ -46,7 +46,7 @@ section>div:first-child>h1, section>div:last-child>h1  {
 
 /* desktop */
 
-@media(min-width: 1281px){
+@media(min-width: 901px){
     .heading-left-right{
         display: none;
     }
@@ -62,7 +62,7 @@ section>div:first-child>h1, section>div:last-child>h1  {
 
 
 /* tablets */
-@media(max-width: 1280px){
+@media(max-width: 900px){
     .heading-left, #stack .right{
         display: none;
     }

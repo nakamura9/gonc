@@ -4,10 +4,6 @@
     src: url('https://fonts.googleapis.com/css?family=Montserrat:400,900i&display=swap'); 
 }
 
-@font-face {
-    name: 'Titillium Web',
-    src: url('https://fonts.googleapis.com/css?family=Titillium+Web:900&display=swap')
-}
 
 /* commom */
 body {
@@ -15,9 +11,8 @@ body {
     padding: 0;
     background-color: #eee;
     color: #333;
-    font-size: 16px;
-    font-family: 'Montserrat', sans-serif;
-
+    /* font-size: 2rem; */
+    font-family: 'Roboto', sans-serif;
 }
 
 
@@ -44,7 +39,7 @@ section>div:first-child>h1, section>div:last-child>h1  {
     top: 48px; */
     font-size: 6rem;
     font-weight: 900;
-    font-family: "Titillium Web" sans-serif;
+    font-family: 'Montserrat', sans-serif;
     opacity: 0.5;
 }
 
@@ -136,7 +131,7 @@ section>div:first-child>h1, section>div:last-child>h1  {
         max-width: 568px!important;
         width: 568px!important;
         min-width: 568px!important;
-        font-size: 2rem!important;
+        font-size: 2.5rem!important;
     }
     .card-body{
         margin: 48px !important
@@ -168,7 +163,7 @@ section>div:first-child>h1, section>div:last-child>h1  {
         margin: 64px!important;
     }
 
-    .team-card img {
+    .team-contact img {
         display:none!important;
     }
 
@@ -178,6 +173,9 @@ section>div:first-child>h1, section>div:last-child>h1  {
     
     #stack-content .row::-webkit-scrollbar-thumb {
         border-radius: 8px;
+    }
+    .about-cell p, .team-card p {
+        font-size:2.5rem !important;
     }
 
 }

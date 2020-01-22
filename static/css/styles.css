@@ -15,7 +15,9 @@ body {
     padding: 0;
     background-color: #eee;
     color: #333;
+    font-size: 16px;
     font-family: 'Montserrat', sans-serif;
+
 }
 
 
@@ -46,11 +48,142 @@ section>div:first-child>h1, section>div:last-child>h1  {
     opacity: 0.5;
 }
 
-@media(max-width: 900px){
+
+/* desktop */
+
+@media(min-width: 1281px){
+    .heading-left-right{
+        display: none;
+    }
+
+    #projects .left, #stack .left, #about .left{
+        display: none;
+    }
+    #projects .container, #stack-content, .about-grid{
+        width: 70%!important;
+    }
+    
+}
+
+
+/* tablets */
+@media(max-width: 1280px){
+    .heading-left, #stack .right{
+        display: none;
+    }
+
     section>h1{
         position: static;
     }
+    h1>br {
+        display: none;;
+    }
+
+    .nav {
+        width: 75% !important;
+    }
+    
+    .nav li {
+        padding-bottom: 1rem;
+
+    }
+
+    .nav ul span {
+        font-size: 3rem;
+    }
+
+    .nav-visible .nav-content {
+        display:flex;
+        align-items: baseline !important;
+        justify-content: left;
+    }
+
+    .hero-background {
+        padding: 200px  20px !important;
+    }
+
+    .hero-background img {
+        position:relative;
+        top:0 !important;
+        left: 0 !important;
+    }
+
+    .hero__foreground-text {
+        font-family: 'Montserrat', sans-serif!important;
+
+    }
+
+    .hero__foreground-text span:last-child{
+        font-size:3rem!important;
+        color: #eee!important;
+
+    }
+
+    .hero__foreground-text span:first-child{
+        font-size:6rem!important;
+        color: white!important;
+
+    }
+
+    .card, 
+    .simple-card, 
+    .project-card, 
+    .testimonial-card, 
+    .about-cell, 
+    .team-card,
+    .row .simple-card{
+        border-radius: 8px;
+        max-width: 568px!important;
+        width: 568px!important;
+        min-width: 568px!important;
+        font-size: 2rem!important;
+    }
+    .card-body{
+        margin: 48px !important
+    }
+
+    #projects .container, .about-grid {
+        width: 100% !important;
+        /* margin: 0px auto; */
+    }
+    .container, #stack-content{
+        width: 100% !important;
+    }
+    .about-grid-row{ 
+        flex-direction: column!important;
+    }
+
+    .about-cell{
+        box-shadow: 0px 0px 0px!important;
+        border-bottom: 1px solid #10809f!important;
+    }
+
+    .testimonial-card__image {
+        width: 456px!important;
+        height: 172px!important;
+        bottom: -48px!important;
+        
+    }
+    .testimonial-card {
+        margin: 64px!important;
+    }
+
+    .team-card img {
+        display:none!important;
+    }
+
+    #stack-content .row::-webkit-scrollbar {
+        height: 16px;
+    }
+    
+    #stack-content .row::-webkit-scrollbar-thumb {
+        border-radius: 8px;
+    }
+
 }
+
+/* mobile */
+
 
 .container {
     display:flex;
@@ -75,33 +208,6 @@ h3 {
     text-align: right;
 }
 
-@media(max-width: 1280px){
-    .heading-left, #stack .right{
-        display: none;
-    }
-
-}
-
-@media(max-width: 720px){
-    .container, #stack-content{
-        width: 100% !important;
-    }
-}
-
-@media(min-width: 1281px){
-    .heading-left-right{
-        display: none;
-    }
-
-    #projects .left, #stack .left, #about .left{
-        display: none;
-    }
-    #projects .container, #stack-content, .about-grid{
-        width: 70%!important;
-    }
-    
-}
-
 .nav {
     z-index: 1000;
     margin: 0px;
@@ -109,15 +215,12 @@ h3 {
     left: 0;
     top: 0;
     height: 10vh;
-    width: 50%;
+    width: 33%;
     background-color: transparent;
     padding: 24px;
     transition: background-color 0.3s ease-in;
     
 }
-
-
-
 
 .nav .nav-content{
     display: none;
@@ -160,27 +263,10 @@ h3 {
 
 .nav-content {
     height: 100%;
+    overflow-y: auto;
 }
 
-.animated-button {
-    width: 64px;
-    height: 64px !important;
-    border-radius: 4px;
-}
 
-.animated-button:hover span{
-    border: 3px solid #999;
-    
-}
-.animated-button span{
-    width: 100%;
-    background-color: white;
-    border: 1px solid #999;
-    display: inline-block;
-    height: 6px !important;
-    border-radius: 2.5px;
-    transition: transform 0.3s ease;
-}
 
 .nav-visible .animated-button span:first-child {
     transform: translate(0px, 18px) rotateZ(45deg);
@@ -205,7 +291,7 @@ h3 {
 
 .nav ul span {
     text-decoration: none;
-    color: #333;
+    color: #10809f;
     display: inline-block;
     padding: 0.5rem;
     transition: transform 0.3s linear;
@@ -214,9 +300,29 @@ h3 {
 .nav ul span:hover {
     transform: scale(1.5);
     color: #eee;
-    background-color: #333;
+    background-color: #10809f;
     border-radius: 0.75rem;
 
+}
+
+.animated-button {
+    width: 64px;
+    height: 64px !important;
+    border-radius: 4px;
+}
+
+.animated-button:hover span{
+    border: 3px solid #999;
+    
+}
+.animated-button span{
+    width: 100%;
+    background-color: white;
+    border: 1px solid #999;
+    display: inline-block;
+    height: 6px !important;
+    border-radius: 2.5px;
+    transition: transform 0.3s ease;
 }
 
 .card, .simple-card {
@@ -268,7 +374,7 @@ h3 {
     padding: 10vh 25vw;
     z-index: -1;
     /* opacity: 0.3; */
-    background: linear-gradient(to right, rgb(16,128,159) 50%, rgb(140,186,81) 50%)
+    background: linear-gradient(to right, rgb(16,128,159) 50%, rgb(255,255,255) 50%)
 }
 
 .hero-background img{
@@ -288,6 +394,7 @@ h3 {
     position: absolute;
     font-weight: 900;
     color: white;
+    text-shadow: 2px 0 0 #10809f, -2px 0 0 #10809f, 0 2px 0 #10809f, 0 -2px 0 #10809f, 1px 1px #10809f, -1px -1px 0 #10809f, 1px -1px 0 #10809f, -1px 1px 0 #10809f;
 }
 
 .hero__foreground-text span:last-child{
@@ -350,13 +457,9 @@ h3 {
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: center;
+    align-self: center;
 }
 
-@media(max-width: 676px){
-    .about-grid-row{ 
-        flex-direction: column;
-    }
-}
 
 .about-cell {
     flex: 1;
@@ -442,7 +545,7 @@ h3 {
     /* border: 5px solid white; */
     background-color: white;;
     
-    box-shadow: 0px 0px 5px #ccc;
+    box-shadow: 0px 2px 8px #bbb;
     z-index: 10;
     position: absolute;
     left: 56px;

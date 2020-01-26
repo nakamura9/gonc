@@ -62,13 +62,14 @@ section>div:first-child>h1, section>div:last-child>h1  {
 
 
 /* tablets */
-@media only screen and (max-width: 991px){
+@media only screen and (max-width: 720px){
     .heading-left, #stack .right{
         display: none;
     }
 
-    section>h1{
+    section h1{
         position: static;
+        font-size: 3rem!important;
     }
     h1>br {
         display: none;;
@@ -79,12 +80,12 @@ section>div:first-child>h1, section>div:last-child>h1  {
     }
     
     .nav li {
-        padding-bottom: 1rem;
+        padding-bottom: .5rem;
 
     }
 
     .nav ul span {
-        font-size: 3rem;
+        font-size: 1.5rem;
     }
 
     .nav-visible .nav-content {
@@ -109,14 +110,15 @@ section>div:first-child>h1, section>div:last-child>h1  {
     }
 
     .hero__foreground-text span:last-child{
-        font-size:3rem!important;
+        font-size:2rem!important;
         color: #eee!important;
 
     }
 
     .hero__foreground-text span:first-child{
-        font-size:6rem!important;
+        font-size:2rem!important;
         color: white!important;
+        line-height: 0.25rem;
 
     }
 
@@ -128,13 +130,13 @@ section>div:first-child>h1, section>div:last-child>h1  {
     .team-card,
     .row .simple-card{
         border-radius: 8px;
-        max-width: 568px!important;
-        width: 568px!important;
-        min-width: 568px!important;
-        font-size: 2.5rem!important;
+        max-width: 300px!important;
+        width: 300px!important;
+        min-width: 300px!important;
+        font-size: 1rem!important;
     }
     .card-body{
-        margin: 48px !important
+        margin: 16px !important
     }
 
     #projects .container, .about-grid {
@@ -154,13 +156,13 @@ section>div:first-child>h1, section>div:last-child>h1  {
     }
 
     .testimonial-card__image {
-        width: 456px!important;
-        height: 172px!important;
-        bottom: -48px!important;
+        width: 200px!important;
+        height: 50px!important;
+        bottom: 10px!important;
         
     }
     .testimonial-card {
-        margin: 64px!important;
+        margin: 50px!important;
     }
 
     .team-contact img {
@@ -168,14 +170,14 @@ section>div:first-child>h1, section>div:last-child>h1  {
     }
 
     #stack-content .row::-webkit-scrollbar {
-        height: 16px;
+        height: 8px;
     }
     
     #stack-content .row::-webkit-scrollbar-thumb {
-        border-radius: 8px;
+        border-radius: 4px;
     }
     .about-cell p, .team-card p {
-        font-size:2.5rem !important;
+        font-size:1rem !important;
     }
 
 }

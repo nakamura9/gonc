@@ -801,3 +801,19 @@ label{
 section#contact {
     background-image: url(/static/images/email-pattern.png)
 }
+
+input[type='submit'] {
+    background-color: #333;
+    border: 0px;
+    padding: 0.5rem;
+    font-size: 1.25rem;
+    color: white;
+    border-radius: .25rem;
+    box-shadow: 0px 2px 5px #ccc;
+}
+
+input[type='submit']:hover {
+    transform: scale(1.125);
+    box-shadow: 0px 4px 8px #ccc,
+                0pc 2px 4px #777;
+}

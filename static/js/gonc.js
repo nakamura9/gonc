@@ -28,10 +28,8 @@ window.onload = function(){
         var offset = services_location - window.pageYOffset
         if(offset > 0){
             var ratio = offset / services_location
-            console.log(ratio)
             var hero = document.getElementById('hero')
             var angle = ratio * 90
-            console.log(angle)
             hero.style.background = 'linear-gradient(' + angle + 'deg, #039be5 50%, #fff 50%)' 
         }
         

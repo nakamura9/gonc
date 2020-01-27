@@ -57,14 +57,40 @@ section>div:first-child>h1, section>div:last-child>h1  {
     #projects .container, #stack-content, .about-grid{
         width: 70%!important;
     }
+
+   
     
 }
 
 
 /* tablets */
 @media only screen and (max-width: 720px){
+    .herotron p {
+        font-size: 2rem !important;
+        padding: 5px !important;
+    }
+    
+    .herotron p>span:last-child{
+        font-size: 1.25rem !important;
+    }
+    .herotron {
+        top:20vh !important;
+        height: 50vh !important;
+        width: 100% !important;
+        padding: 30px !important;
+    }
+
     .heading-left, #stack .right{
         display: none;
+    }
+
+    .contact-form {
+        width: 80%!important;
+    }
+    input[type="text"], input[type="email"], textarea {
+        font-size: 1rem !important;
+        padding: 0.25rem !important;
+        margin-bottom: 0.5rem !important;    
     }
 
     section h1{
@@ -361,19 +387,51 @@ h3 {
 }
 
 /* hero */
-
-#hero {
-    display:flex;
-    flex-direction: row;
-    margin-top: -100px;
+.static-logo {
+    position: absolute;
+    left: 92px;
+    top: 36px;
 }
 
+.herotron {
+    position: absolute;
+    left: 0;
+    top: 30vh;
+    height: 30vh;
+    width: 100%;
+    padding: 30px 25vw;
+    background-image: url(/static/images/pattern.png);
+}
+
+.herotron p {
+    font-size: 3rem;
+    font-weight: 900;
+    background-color: white;
+    display:inline-block;
+    padding: 20px;
+}
+
+.herotron p>span:last-child{
+    font-size: 2rem;
+    color: #007bff
+}
+
+#hero {
+    /* display:flex;
+    flex-direction: row;
+    margin-top: -100px; */
+    background: linear-gradient(45deg, #039be5 50%, #fff 50%);
+}
+
+
+
+/* 
 .hero-background {
     width: 100vw;
     height: 100vh;
     padding: 10vh 25vw;
     z-index: -1;
-    /* opacity: 0.3; */
+    opacity: 0.3;
     background: linear-gradient(to right, rgb(16,128,159) 50%, rgb(255,255,255) 50%)
 }
 
@@ -427,7 +485,7 @@ h3 {
 }
 .hero__foreground-text>p:first-child {
     font-size: 4rem;
-}
+} */
 
 /* services */
 
@@ -700,4 +758,46 @@ footer a {
 
 .nav i {
     opacity: 0.7;
+}
+
+/* Contact section */
+
+input[type="text"], input[type="email"], textarea {
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    display:block;
+    border: 0px;
+    border-bottom: 2px solid #999;
+    width: 100%;
+
+}
+
+/* input[type="text"]:focus, 
+input[type="email"]:focus,
+input[type="text"]:focus-visible, 
+input[type="email"]:focus-visible  {
+    border: 0px;
+    border-bottom: 3px solid #007bff;
+}  */
+
+textarea {
+    border: 2px solid #999!important;
+
+}
+
+
+label{
+    font-size: 1.5rem;
+}
+
+.contact-form {
+    margin: 10vh auto;
+    width: 50%;
+    padding: 36px;
+    background-color: white;
+}
+
+section#contact {
+    background-image: url(/static/images/email-pattern.png)
 }

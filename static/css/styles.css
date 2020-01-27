@@ -95,7 +95,9 @@ section>div:first-child>h1, section>div:last-child>h1  {
 
     section h1{
         position: static;
-        font-size: 3rem!important;
+        font-size: 2rem !important;
+        font-weight: 200 !important;
+        font-family: 'Roboto', sans-serif !important;
     }
     h1>br {
         display: none;;
@@ -295,11 +297,11 @@ h3 {
 
 
 .nav-visible .animated-button span:first-child {
-    transform: translate(0px, 18px) rotateZ(45deg);
+    transform: translate(0px, 16px) rotateZ(45deg);
 }
 
 .nav-visible .animated-button span:last-child {
-    transform:translate(0px, -18px)  rotateZ(-45deg);
+    transform:translate(0px, -13px)  rotateZ(-45deg);
 }
 
 .nav-visible .animated-button span:nth-child(2) {
@@ -332,9 +334,11 @@ h3 {
 }
 
 .animated-button {
-    width: 64px;
-    height: 64px !important;
-    border-radius: 4px;
+    width: 48px;
+    height: 48px !important;
+    font-size: 12px !important;
+    box-sizing: border-box;
+    /* border-radius: 4px; */
 }
 
 .animated-button:hover span{
@@ -346,8 +350,8 @@ h3 {
     background-color: white;
     border: 1px solid #999;
     display: inline-block;
-    height: 6px !important;
-    border-radius: 2.5px;
+    height: 4px !important;
+    border-radius: 2px;
     transition: transform 0.3s ease;
 }
 

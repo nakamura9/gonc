@@ -20,7 +20,6 @@ function showNav(){
 }
 
 
-
 window.onload = function(){
     this.document.addEventListener('scroll', function(){
         var services = document.getElementById('services');

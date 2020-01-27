@@ -1,0 +1,22 @@
+{
+  "name": "gonc",
+  "version": "1.0.0",
+  "description": "blogging features",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nakamura9/gonc.git"
+  },
+  "keywords": [
+    "blog"
+  ],
+  "author": "caleb kandoro",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nakamura9/gonc/issues"
+  },
+  "homepage": "https://github.com/nakamura9/gonc#readme"
+}

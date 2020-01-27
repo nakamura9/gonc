@@ -1,0 +1,466 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    padding: 0px;
+    background-color: #eee;
+    color: #333;
+}
+
+section {
+    min-height: calc(100vh - 90px);
+    padding-top: 90px;
+}
+
+section h1 {
+    text-align: center;
+}
+
+#hero {
+    background-image: url('/static/images/bentsch/work.jpg');
+    background-size: cover;
+}
+
+nav {
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    left: 0;
+    top: 0;
+    background-color: white;
+    border-top: 2px solid #23374D;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0px 2px 4px #999,
+                0px 4px 8px #ccc;
+}
+
+nav >span {
+    background-color: #23374D;
+
+}
+
+nav li {
+    display: block;
+    padding: 15px 10px;
+    height: 40px;
+    transition: background-color 0.3s linear;
+
+}
+
+nav li:hover, nav li.active {
+    color: white !important;
+    background-color: #23374D;
+}
+
+nav li:hover a, nav li.active a {
+    color: white !important;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+
+    margin: 0px auto;
+    margin-block-start: 0px;
+    margin-block-end: 0px;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 0px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #23374D;
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+}
+
+
+nav img {
+     width: auto;
+     height: 40px;
+     margin: 15px 5px;
+ }
+
+.nav-visible .animated-button span:first-child {
+    transform: translate(0px, 16px) rotateZ(45deg);
+}
+
+.nav-visible .animated-button span:last-child {
+    transform:translate(0px, -13px)  rotateZ(-45deg);
+}
+
+.nav-visible .animated-button span:nth-child(2) {
+    background-color: rgb(255, 255, 255, 0);
+    border: 0px;
+}
+
+.animated-button {
+    width: 48px;
+    height: 48px !important;
+    font-size: 12px !important;
+    box-sizing: border-box;
+    display: none;
+    flex: 1;
+    /* border-radius: 4px; */
+}
+
+
+.animated-button span{
+    width: 100%;
+    background-color: white;
+    display: inline-block;
+    height: 4px !important;
+    border-radius: 2px;
+    transition: transform 0.3s ease;
+}
+
+ .hero-text {
+     padding: 48px;
+     background-color:white;
+     display: inline-block;
+     position:relative;
+     top: 64px;
+     left: 60vw;
+     box-shadow: 0px 2px 6px #aaa;
+ }
+
+ #features {
+     background-color: whitesmoke;
+ }
+
+ #features>div {
+     display: flex;
+     flex-direction: row;
+     flex-wrap: wrap;
+     justify-content: center;
+
+ }
+
+ .feature-card {
+     background-color: white;
+     width: 312px;
+     margin: 36px;
+     padding: 24px;
+     border-top: 3px solid #23374D;
+ }
+
+ .feature-card li {
+     list-style-type: none;
+     margin-bottom: 0.5rem;;
+ }
+
+.feature-card i {
+    color: #23374D
+}
+
+.module-container {
+    display: flex;
+    flex-direction: row;
+    height: 80vh;
+    
+}
+
+ .module-container > ul {
+    flex: 1;
+    background-color: #23374D;
+    padding: 1.5rem;
+    margin-block-start: 0px;
+ }
+
+
+ .module-container > ul > li {
+     list-style-type: none;
+     color: white;
+     padding: 1rem 0.5rem;
+ }
+
+ .modules {
+     flex: 5;
+     padding: 0px;
+ }
+
+ .module-view {
+    background-color: powderblue;
+    height: 100%;
+    margin: 0px;
+    overflow: hidden;
+    position: relative;
+    display: none;
+}
+
+.module-view img {
+    position: absolute;
+    left: 30vw;
+    top: 64px;
+    border-radius:12.5px;
+}
+
+
+.module-content{
+    margin: 36px;
+    width: 312px;
+    padding: 24px;
+    background-color: white;
+    display: inline-block;
+    z-index: 100;
+    position: relative;
+}
+
+.module-content p{
+    font-weight: 200;
+}
+
+.module-content h4{
+    font-weight: 900;
+    font-size: 1.5rem;
+}
+
+
+.module-view.active {
+    display: block;
+}
+
+.module-container li.active, .module-container >ul > li:hover {
+    background-color: #007bff;
+    color: white
+}
+
+.testimonial-card {
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    margin: 36px auto;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    background-color: white;
+}
+
+.testimonial-card img {
+    flex: 1;
+    display: block;
+    height:auto;
+    width: 120px;
+    margin: 16px;
+}
+
+
+.testimonial-card >div {
+    flex:3;
+    border-left: 1px solid #aaa;
+    margin:16px;
+    padding: 16px;
+}
+
+.package-card {
+    background-color: white;
+    width: 312px;
+    margin: 24px;
+    padding:16px;
+}
+
+.package-card h3 {
+    font-weight: 200;
+    font-size: 2rem;
+    border-bottom: 1px solid #aaa;
+    padding-bottom: 1rem;
+    text-align: center;
+}
+
+.package-card li {
+    list-style-type: none;
+    margin-bottom: 0.5rem;
+}
+
+.package-card li>i {
+    color: limegreen;
+    margin: 0px 5px;
+}
+
+.packages-container {
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.package-card a {
+    background-color: #23374D;
+    color:white;
+    display: inline-block;
+    padding:0.75rem;
+    font-size: 1rem;
+    border-radius: 0.25rem;
+    text-decoration: none;
+}
+
+.package-card div {
+    display:flex;
+    justify-content: center;
+}
+
+input[type="text"], input[type="email"], textarea, select {
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    display:block;
+    border: 0px;
+    border-bottom: 2px solid #999;
+    width: 100%;
+
+}
+
+
+textarea {
+    border: 2px solid #999!important;
+
+}
+
+
+label{
+    font-size: 1.5rem;
+}
+
+.contact-form {
+    margin: 10vh auto;
+    width: 75%;
+    padding: 36px;
+    background-color: white;
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+section#contact {
+    background-image: url(/static/images/email-pattern.png)
+}
+
+input[type='submit'] {
+    background-color: #333;
+    border: 0px;
+    padding: 0.5rem;
+    font-size: 1.25rem;
+    color: white;
+    border-radius: .25rem;
+    box-shadow: 0px 2px 5px #ccc;
+}
+
+input[type='submit']:hover {
+    transform: scale(1.125);
+    box-shadow: 0px 4px 8px #ccc,
+                0pc 2px 4px #777;
+}
+
+.contact-form h2 {
+    text-align: center;
+}
+
+.contact-form > div:first-child {
+    flex: 2
+}
+
+.contact-form > div:last-child {
+    flex: 1;
+    padding: 24px;
+    margin-left: 24px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* mobile */
+@media(max-width: 480px){
+    .animated-button {
+        display: block;
+        margin: 24px 8px;
+    }
+
+    nav {
+        background: #23374D;
+    }
+
+    nav ul {
+        flex-direction: column;
+        display: none;
+    }
+    nav >span {
+        flex: 5;
+    }
+
+    nav ul {
+        flex-direction: column;
+        display: none;
+    }
+
+    nav.nav-visible ul {
+        display:block;
+        position: absolute;
+        left: 0px;
+        top:72px;
+        background-color: white;
+        width: 100%;
+        box-shadow: 0px 2px 4px #999,
+                    0px 4px 8px #ccc;
+    }
+    
+
+    .testimonial-card {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .hero-text {
+        padding: 24px;
+        background-color:white;
+        display: block;
+        position:relative;
+        top: 36px;
+        left: 0px;
+    }
+
+    #hero {
+        background-image: url('/static/images/bentsch/work-narrow.jpg');
+    }
+
+    .testimonial-card >div {
+        border: 0px;
+    }
+
+    .testimonial-card img {
+        margin: 16px auto;
+    }
+
+    .module-container {
+        flex-direction: column;
+        height: fit-content;
+    }
+
+    .module-container >ul {
+        display: none;
+    }
+
+    .module-view {
+        display: block;
+    }
+
+    .module-view img {
+        position: static;
+        width: 80%;
+        height: auto;
+        margin: 16px auto;
+        border-radius:5px;
+        display: block;   
+    }
+
+    .module-content {
+        position: static;
+        background-color: transparent;
+        margin: 16px;
+        padding: 0px 24px;
+        border-bottom: 1px solid #aaa;
+    }
+    
+
+
+
+}

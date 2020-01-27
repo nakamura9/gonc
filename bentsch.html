@@ -2,30 +2,288 @@
 <html>
 
 <head>
-    
+
     <title>Bentsch Business Tools</title>
     <meta name="charset" content="utf-8">
     <meta name="robots" content='index, follow' />
 
-    <meta name="description" content="Bentsch is the perfect solution for small business functions like accounting sales and inventory.">
+    <meta name="description"
+        content="Bentsch is the perfect solution for small business functions like accounting sales and inventory.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Caleb Kandoro">
     <meta name="keywords" content="ERP, Accounting, Windows, Sales, Inventory, Software ">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css
         ">
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="static/css/styles.css">
+    <link rel="stylesheet" href="static/css/bentsch.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
 </head>
 
 <body>
-
-     
     <main>
-    
+        <nav id='nav'>
+            <span>
+                <a id='hero-link' href="#hero"><img src="/static/images/projects/bentsch-logo.png" alt=""></a>
+            </span>
+            <ul>
+                
+                <li id='features-link'><a href="#features">Features</a></li>
+                <li id='modules-link'><a href="#modules">Modules</a></li>
+                <li id='packages-link'><a href="#packages">Packages</a></li>
+                <li id='testimonials-link'><a href="#testimonials">Testimonials</a></li>
+                <!-- <li><a href="#tryout">Try Bentsch</a></li> -->
+                <li id='contact-link'><a href="#contact">Contact Us</a></li>
+            </ul>
+            <div class='animated-button' id='animated-button' onclick='showNav()'>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+        <section id="hero">
+
+            <div class='hero-text'>
+                <h1>Bentsch Business Tools</h1>
+                <h4>Level up your business!</h4>
+            </div>
+
+        </section>
+        <section id="features">
+            <h1>Features</h1>
+            <div>
+                <div class='feature-card'>
+                    <h3>Comprehensive Feature set</h3>
+                    <p>Bentsch is designed to meet the unique needs of small businesses. Each module features tools to
+                        simplify your business workflow. Built in support for multiple users makes organizing a breeze.</p>
+                    <ul>
+                        <li> <i class="fas fa-dot-circle" aria-hidden="true"></i> Point of Sale</li>
+                        <li> <i class="fas fa-dot-circle" aria-hidden="true"></i> General Ledger</li>
+                        <li> <i class="fas fa-dot-circle" aria-hidden="true"></i> Expense Tracking</li>
+                        <li> <i class="fas fa-dot-circle" aria-hidden="true"></i> Inventory Checks</li>
+                        <li> <i class="fas fa-dot-circle" aria-hidden="true"></i> Inventory Checks</li>
+                    </ul>
+                </div>
+                <div class='feature-card'>
+                    <h3>Modular, Intuitive Design</h3>
+                    <p>Associated features are organized into modules to make feature discovery easier and shorten the
+                        number of steps needed to accomplish a given task.
+                    </p>
+                    <ul>
+                        <li> <i class="fas fa-puzzle-piece" aria-hidden="true"></i> Sales and Invoicing</li>
+                        <li> <i class="fas fa-puzzle-piece" aria-hidden="true"></i> Inventory</li>
+                        <li> <i class="fas fa-puzzle-piece" aria-hidden="true"></i> Accounting</li>
+                        <li> <i class="fas fa-puzzle-piece" aria-hidden="true"></i> Services</li>
+                    </ul>
+                </div>
+                <div class='feature-card'>
+                    <h3>Leverage Data to gain Insights</h3>
+                    <p>Each module is tightly coupled to allow data from every part of your business to contribute to a
+                        complete picture of the state of your business.
+                        Intuitive dashboards give a quick summary of your data.</p>
+                    <ul>
+                        <li> <i class="fas fa-chart-line    "></i> Over 25 reports</li>
+                        <li> <i class="fas fa-chart-line    "></i> 5 Dashboards</li>
+                        <li> <i class="fas fa-chart-line    "></i> Save reports as PDFs or CSV</li>
+                        <li> <i class="fas fa-chart-line    "></i> Customize reports with powerful filters</li>
+                    </ul>
+
+                </div>
+            </div>
+        </section>
+        <section id="modules">
+            <h1>Modules</h1>
+            <div class="module-container">
+                <ul>
+                    <li id='sales-button' class='active' onclick="setActiveModule('sales')">Sales and Invoicing</li>
+                    <li id='inventory-button' onclick="setActiveModule('inventory')">Inventory</li>
+                    <li id='accounting-button' onclick="setActiveModule('accounting')">Accounting</li>
+                    <li id='services-button' onclick="setActiveModule('services')">Services</li>
+                </ul>
+                <div class="modules">
+                    <div class='module-view active' id='sales'>
+                        <img src="/static/images/bentsch/modules/sales.png" alt="">
+
+                        <div class="module-content">
+                            <h4>Sales and Invoicing</h4>
+                            <p>Manage Sales from quotations to payments</p>
+                            <ul>
+                                <li>Quotations and Invoices</li>
+                                <li>Point of Sale</li>
+                                <li>7 Reports</li>
+                            </ul>
+
+                        </div>
+                    </div>
+                    <div class='module-view' id='inventory'>
+                        <img src="/static/images/bentsch/modules/inventory.png" alt="">
+                        <div class='module-content'>
+                            <h4>Inventory</h4>
+                            <p>Manage stock and purchasing while interacting with vendors.</p>
+                            <ul>
+                                <li>Orders and Debit Notes</li>
+                                <li>Requisitions</li>
+                                <li>Stock adjustments and review</li>
+                                <li>6 Reports</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class='module-view' id='accounting'>
+                        <img src="/static/images/bentsch/modules/accounting.png" alt="">
+                        <div class='module-content'>
+                            <h4>Accounting</h4>
+                            <p>Manage accounts, track expenses and assets.</p>
+                            <ul>
+                                <li>General Ledger</li>
+                                <li>Track Expenses</li>
+                                <li>Manage Bills</li>
+                                <li>Assets and Depreciation</li>
+                                <li>9 Reports</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class='module-view' id='services'>
+                        <img src="/static/images/bentsch/modules/services.png" alt="">
+                        <div class='module-content'>
+                            <h4>Services</h4>
+                            <p>Use work orders to track and assign tasks to employees</p>
+                            <ul>
+                                <li>Requisitions of Equipment and Consumables</li>
+                                <li>Work Orders</li>
+                                <li>Procedures</li>
+                                <li>3 Reports</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </section>
+        <section id="packages">
+            <h1>Packages</h1>
+            <div class="packages-container">
+                <div class='package-card'>
+                    <h3>Self-Employeed</h3>
+                    <p>Ideal for sole trader based businesses, with no additional employees</p>
+                    <ul>
+                        <li> <i class="fa fa-check" aria-hidden="true"></i> 1 User</li>
+                        <li> <i class="fa fa-check" aria-hidden="true"></i> Sales and Invoicing</li>
+                        <li> <i class="fa fa-check" aria-hidden="true"></i> Inventory</li>
+                        <li> <i class="fa fa-check" aria-hidden="true"></i> Accounting</li>
+                        <li> <i class="fa fa-check" aria-hidden="true"></i> Services</li>
+                        <li> <i class="fa fa-check" aria-hidden="true"></i> Reporting</li>
+                    </ul>
+                    <div>
+                        <a href='#contact'>Request Quote</a>
+                    </div>
+                </div>
+                <div class='package-card'>
+                    <h3>Micro Business</h3>
+                    <p>Ideal for small businesses with less than 10 employees.</p>
+                    <ul>
+                        <li> <i class="fa fa-check" aria-hidden="true"></i> Up to 3 Users</li>
+                        <li> <i class="fa fa-check" aria-hidden="true"></i> All self-employeed features</li>
+                        <li> <i class="fa fa-check" aria-hidden="true"></i> Warehouse Management</li>
+                        <li> <i class="fa fa-check" aria-hidden="true"></i> Employees Management</li>
+                        <li> <i class="fa fa-check" aria-hidden="true"></i> Inventory Requisitions</li>
+                        <li> <i class="fa fa-check" aria-hidden="true"></i> Point of Sale Support</li>
+                    </ul>
+                    <div>
+                        <a href='#contact'>Request Quote</a>
+                    </div>
+                </div>
+                <div class='package-card'>
+                    <h3>Small Business</h3>
+                    <p>Perfect for businesses with up to 20 Employees</p>
+                    <ul>
+                        <li> <i class="fa fa-check" aria-hidden="true"></i> All Small Business Packages</li>
+                        <li> <i class="fa fa-check" aria-hidden="true"></i> Up to 10 Users</li>
+                        <li> <i class="fa fa-check" aria-hidden="true"></i> VPN configuration for remote access.</li>
+                        <li> <i class="fa fa-check" aria-hidden="true"></i> Manage Multiple Warehouses</li>
+                        <li> <i class="fa fa-check" aria-hidden="true"></i> Manage Teams</li>
+                    </ul>
+                    <div>
+                        <a href='#contact'>Request Quote</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="testimonials">
+            <h1>What business people think of Bentsch</h1>
+            <div class='testimonial-card'>
+                <img src="/static/images/bentsch/user.png" alt="">
+                
+                <div>
+                    <p><i class="fa fa-quote-left fa-2x" aria-hidden="true"></i></p>
+                    <p>Using Bentsch has allowed me to get a clearer picture of the state of my business and informed my
+                        decision making process.</p>
+                    <p><b>-Memory,</b><i>Paradise Park</i></p>
+                </div>
+            </div>
+            <div class='testimonial-card'>
+                <img src="/static/images/bentsch/user.png" alt="">
+                <div>
+                    <p><i class="fa fa-quote-left fa-2x" aria-hidden="true"></i></p>
+                    <p>Bentsch allows me to focus on the bigger picture and leave the details to others.</p>
+                    <p><b>-Last,</b><i>Latrom</i></p>
+                </div>
+            </div>
+        </section> 
+        <section id="contact">
+            <div class='contact-form'>
+                <div>
+                    <h2>Contact Us <i class="fa fa-envelope " data-aos='fade-left' aria-hidden="true"></i> </h2>
+                <form action="" method="POST">
+                    <label for="name">Name:</label>
+                    <input type="text" name="name" id="name">
+                    <label for="email">Email:</label>
+                    <input type="email" name="email" id="email">
+                    <label for="package">Package:</label>
+                    <select name="package" id="package">
+                        <option value="self-employeed">Self Employeed</option>
+                        <option value="micro-business">Micro-Business</option>
+                        <option value="small-business">Small Business</option>
+                    </select>
+                    <label for="message">Message:</label>
+                    <textarea name="message" id="message" cols="30" rows="10"></textarea>
+                    <input type="submit" value="Submit">
+                </form>
+
+                </div>
+                <div>
+                    <h3>Contact Details</h3>
+                    <h5>Caleb Kandoro</h5>
+                    <p> <i class="fa fa-at" aria-hidden="true"></i> caleb@gonc.co.zw</p>
+                    <p> <i class="fa fa-phone" aria-hidden="true"></i> +263777970656</p>
+                    <hr>
+                    <h5>Godwin Chinonzo</h5>
+                    <p> <i class="fa fa-at" aria-hidden="true"></i> godwin@gonc.co.zw</p>
+                    <p> <i class="fa fa-phone" aria-hidden="true"></i> +263775221220</p>
+
+                </div>
+            </div>
+
+        </section>
+        <!-- <section id="tryout">
+            <h1>Try Bentsch For Free</h1>
+        </section> -->
     </main>
+    <footer>
+        Bentsch
+        <i class="fab fa-facebook" aria-hidden="true"></i>
+        <a style="background-color:black;color:white;text-decoration:none;padding:4px 6px;font-family:-apple-system, BlinkMacSystemFont, &quot;San Francisco&quot;, &quot;Helvetica Neue&quot;, Helvetica, Ubuntu, Roboto, Noto, &quot;Segoe UI&quot;, Arial, sans-serif;font-size:12px;font-weight:bold;line-height:1.2;display:inline-block;border-radius:3px"
+            href="https://unsplash.com/@fredmarriage?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge"
+            target="_blank" rel="noopener noreferrer"
+            title="Download free do whatever you want high-resolution photos from freddie marriage"><span
+                style="display:inline-block;padding:2px 3px"><svg xmlns="http://www.w3.org/2000/svg"
+                    style="height:12px;width:auto;position:relative;vertical-align:middle;top:-2px;fill:white"
+                    viewBox="0 0 32 32">
+                    <title>unsplash-logo</title>
+                    <path d="M10 9V0h12v9H10zm12 5h10v18H0V14h10v9h12v-9z"></path>
+                </svg></span><span style="display:inline-block;padding:2px 3px">freddie marriage</span></a>
+                Icons made by <a href="https://www.flaticon.com/authors/monkik" title="monkik">monkik</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
+    </footer>
 
     <script src="static/js/bentsch.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>

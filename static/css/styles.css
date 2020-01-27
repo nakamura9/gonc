@@ -109,11 +109,6 @@ section>div:first-child>h1, section>div:last-child>h1  {
     
     .nav li {
         padding-bottom: .5rem;
-
-    }
-
-    .nav ul span {
-        font-size: 1.5rem;
     }
 
     .nav-visible .nav-content {
@@ -317,15 +312,16 @@ h3 {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.nav ul span {
+.nav ul span, .nav ul a {
     text-decoration: none;
     color: #10809f;
     display: inline-block;
     padding: 0.5rem;
     transition: transform 0.3s linear;
+    font-size: 1.5rem;
 }
 
-.nav ul span:hover {
+.nav ul span:hover,.nav ul a:hover {
     transform: scale(1.5);
     color: #eee;
     background-color: #10809f;

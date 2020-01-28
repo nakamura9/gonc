@@ -15,16 +15,10 @@ const client = createClient({
 const Blog =(props) =>{
     const [posts, setPosts] = React.useState([])
     const [heroPosts, setHeroPosts] = React.useState([])
+    const [filters, setFilters] = React.useState(null)
     
     React.useEffect(()=>{
-        client.getEntries({
-            content_type: 'blogPost',
-            'limit': 20
-        }).then(res =>{
-            let posts = res.items
-            
-            setPosts(posts)
-        });
+        
         client.getEntries({
             content_type: 'blogPost',
             'order': 'sys.createdAt',
@@ -33,6 +27,54 @@ const Blog =(props) =>{
             setHeroPosts(res.items)
         });
     }, [])
+
+    React.useEffect(()=>{
+        let filteredPosts = []
+        if(filters == null){
+            client.getEntries({
+                content_type: 'blogPost',
+                'limit': 20
+            }).then(res =>{
+                setPosts(res.items)
+            });
+        }else{
+            if(filters.text != ""){
+                client.getEntries({
+                    content_type: 'blogPost',
+                    query: filters.text,
+                    
+                }).then(res =>{
+                    setPosts(res.items)
+                });
+        }
+    }
+        
+        // if(filters != null){
+        //     
+        //     }
+
+        //     //filter tags
+        //     if(filters.tag != ""){
+        //         let filteredTag;
+        //         filteredPosts = filteredPosts.filter(post =>{
+        //             for(tag in post.fields.tags){
+        //                 if(tag == tag.fields.name){
+        //                     return true;
+        //                 }
+        //             }
+        //             return false
+        //         })
+        //     }
+        //     //filter author
+        //     if(filters.author != ""){
+        //         filteredPosts = filteredPosts.filter(post =>{
+        //             return(post.fields.author.name == author)
+        //         })
+        //     }
+        // }
+        // console.log(filteredPosts)
+        // setPosts(filteredPosts)
+    }, [filters])
 
     return(
         <React.Fragment>
@@ -54,7 +96,7 @@ const Blog =(props) =>{
         <div class='post-container'>
             <Filters client={client}
                 filterList={(arg) =>{
-                    console.log(arg)
+                    setFilters(arg)
                 }}/>
             <div class="post-list">
                 {posts.map((post, i)=>(

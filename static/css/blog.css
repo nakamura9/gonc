@@ -28,7 +28,7 @@ section {
 
 .hero-text h1 {
     font-size: 4rem;
-    line-height: 0rem;
+    line-height: 4.5rem;
 }
 
 .hero-text h5 {
@@ -43,6 +43,8 @@ section {
     flex-direction: row;
     align-items: flex-start;
     justify-content: center;
+    width: 100%;
+    overflow-x: scroll;
 }
 
 
@@ -71,7 +73,8 @@ section {
     flex: 1;
     padding: 16px;
     margin: 24px;
-    border-right: 1px solid #aaa;
+    box-shadow: 0px 2px 4px  #aaa,
+                0px 4px 12px  #ddd;
 }
 
 .post-list {
@@ -83,6 +86,7 @@ section {
 .post {
     display: flex;
     flex-direction: row;
+    margin-bottom: 24px;
 }
 
 .post img {
@@ -93,7 +97,10 @@ section {
 }
 
 .post > div {
-    flex: 4
+    flex: 4;
+
+    padding: 16px;
+
 }
 
 .post-date {
@@ -168,4 +175,39 @@ input {
     padding: 0.25rem;
     font-size: 1rem;
     border-radius: 0.25rem;
+}
+
+.author-card {
+    width: 96px !important;
+    padding: 8px;
+    margin: 16px auto;
+    background-color: white;
+    border: 1px solid steelblue;
+    border-radius: 5px;
+}
+
+.author-card img {
+    width: 80px !important;
+    height: auto;
+    margin: 0px;
+}
+
+.author-card-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: start;
+    width: 100%;
+    overflow-x: scroll;
+}
+
+@media(max-width: 720px){
+    .hero-text {
+        left: 0px;
+        top: 0px;
+    }
+
+    .hero {
+        background-image: url('/static/images/blog/blog-narrow.jpg');
+    }
 }

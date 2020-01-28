@@ -1,7 +1,6 @@
 import React from 'react';
 import {createClient} from 'contentful'
 import {documentToReactComponents} from '@contentful/rich-text-react-renderer'
-import {Helmet} from 'react-helmet'
 
 const client = createClient({
     space: "8e1sjlb73zoa",
@@ -16,34 +15,39 @@ const Post =(props) =>{
             setPost(res)
         })
     }, [])
+
     return(
-        <div>
+        <section>
+        {post != null ? 
+            <React.Fragment>
+            <div className='post-hero'>
+                <img src={`${post.fields.mainImage.fields.file.url}`} alt="Blog Post Title"/>
                 <div>
-                    {post != null ? <React.Fragment>
+                    <div>
                         <h1>{post.fields.title}</h1>
-                        <p><i> Published: {new Date(post.fields.datePosted).toDateString()}</i></p>
-                        <img src={`${post.fields.mainImage.fields.file.url}`} alt="Blog Post Title"/>
-                        <br/>
+                        <p>
+                            <i>{new Date(post.fields.datePosted).toDateString()}</i>
+                        </p>
                         <h5>By {post.fields.author.fields.name}</h5>
-                        <hr className='my-2' />
-                        
-                        <div >
-                        {documentToReactComponents(post.fields.content)}
-                        </div>
-                        
-                        
-                        <hr className='my-2' />
-                        <p> <u> Tagged under:</u></p>
-                        <div>
-                            {post.fields.tags.map(tag=>(
-                                <span ># {tag.fields.name}</span>
-                            ))}
-                        </div>
-                    </React.Fragment> 
-                    : <p>Loading blog post...</p>
-                }
+                    </div>
                 </div>
             </div>
+            <div className='post-content'>
+                {documentToReactComponents(post.fields.content)}
+            
+                <hr className="my-2"/>
+                <p style={{textAlign: 'center'}}> <u> Tagged under:</u></p>
+                <div>
+                    {post.fields.tags.map(tag=>(
+                        <span className='post-tag' ># {tag.fields.name}</span>
+                    ))}
+                </div>
+            </div>
+            
+            </React.Fragment> 
+            : <p>Loading blog post...</p>
+        }
+        </section>
     )
 }
 

@@ -178,6 +178,8 @@ section>div:first-child>h1, section>div:last-child>h1  {
         border-bottom: 1px solid #10809f!important;
     }
 
+    
+
     .testimonial-card__image {
         width: 200px!important;
         height: 50px!important;
@@ -396,11 +398,11 @@ h3 {
 .herotron {
     position: absolute;
     left: 0;
-    top: 30vh;
+    top: 20vh;
     height: 30vh;
     width: 100%;
     padding: 30px 25vw;
-    background-image: url(/static/images/pattern.png);
+    opacity: 1;
 }
 
 .herotron p {
@@ -409,6 +411,8 @@ h3 {
     background-color: white;
     display:inline-block;
     padding: 20px;
+    border-top: 3px solid #039be5;
+
 }
 
 .herotron p>span:last-child{
@@ -417,76 +421,14 @@ h3 {
 }
 
 #hero {
-    /* display:flex;
-    flex-direction: row;
-    margin-top: -100px; */
-    background: linear-gradient(45deg, #039be5 50%, #fff 50%);
-}
-
-
-
-/* 
-.hero-background {
-    width: 100vw;
-    height: 100vh;
-    padding: 10vh 25vw;
-    z-index: -1;
-    opacity: 0.3;
-    background: linear-gradient(to right, rgb(16,128,159) 50%, rgb(255,255,255) 50%)
-}
-
-.hero-background img{
     width: 100%;
-    position:relative;
-    top:10vh;
-    left: -10vw;
-    height: auto;
-    filter:invert();
-    opacity: 0.2;
-    perspective: 1px;
-    transform: translateZ(-1px);
+    background: linear-gradient(45deg, #039be5 50%, transparent 50%);
 }
 
-
-.hero__foreground-text{
-    position: absolute;
-    font-weight: 900;
-    color: white;
-    text-shadow: 2px 0 0 #10809f, -2px 0 0 #10809f, 0 2px 0 #10809f, 0 -2px 0 #10809f, 1px 1px #10809f, -1px -1px 0 #10809f, 1px -1px 0 #10809f, -1px 1px 0 #10809f;
+.hero {
+    background-image: url(/static/images/pattern.png);
+    background-size: cover;
 }
-
-.hero__foreground-text span:last-child{
-    position: absolute;
-    font-weight: 900;
-    color: #ccc;
-    font-size:2rem;
-}
-
-.hero__background-text {
-    top: 20vh;
-    font-size: 60vh;
-    font-family: 'Courier New', Courier, monospace;
-    opacity:0.2;
-    left: 20vw;
-
-}
-
-.hero__foreground-text {
-    top: 30vh;
-    font-family: Arial, Helvetica, sans-serif;
-    left: 25vw;
-    height:fit-content
-
-}
-
-.hero__foreground-text>p:last-child {
-    font-size: 3rem;
-    opacity: 0.8;
-}
-.hero__foreground-text>p:first-child {
-    font-size: 4rem;
-} */
-
 /* services */
 
 #services {
@@ -531,6 +473,11 @@ h3 {
     align-items: center;
     box-shadow: inset 0 0px 5px #10809f;
     border-radius: 5px;
+    transition: box-shadow 0.3s linear;
+}
+
+.about-cell:hover {
+    box-shadow: inset 0px 0px 24px #10809f!important;
 }
 
 .about-cell h3, .team-card h3 {

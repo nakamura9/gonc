@@ -9,7 +9,6 @@ function scrollPageTo(id) {
     var scrollStep = Math.PI / (duration / 10);
     var count = 0, currPos;
     
-    console.log(diff)
     window.scrollBy({ top: diff, left: 0, behavior: 'smooth' })
     
 }
@@ -29,7 +28,7 @@ window.onload = function(){
             var ratio = offset / services_location
             var hero = document.getElementById('hero')
             var angle = ratio * 90
-            hero.style.background = 'linear-gradient(' + angle + 'deg, #039be5 50%, #fff 50%)' 
+            hero.style.background = 'linear-gradient(' + angle + 'deg, #039be5 50%, transparent 50%)' 
         }
         
     })

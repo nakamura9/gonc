@@ -46,6 +46,21 @@ section>div:first-child>h1, section>div:last-child>h1  {
 
 /* desktop */
 
+
+
+.header-text {
+    display: none;
+    font-size: 2rem;
+    padding:0.5rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    color: #10809f
+}
+
+.nav-visible .header-text {
+    display: inline-block;
+}
+
 @media only screen and (min-width: 992px){
     .heading-left-right{
         display: none;
@@ -258,7 +273,6 @@ h3 {
 }
 
 .nav-visible .nav-header {
-    box-shadow: 0px 5px 5px #999;
     padding: 12px;
     height:48px
 }
@@ -266,6 +280,7 @@ h3 {
 .nav-header {
     display: flex;
     flex-direction: row;
+    align-items: center;
 }
 
 .nav-header img {
@@ -316,7 +331,7 @@ h3 {
 
 .nav ul span, .nav ul a {
     text-decoration: none;
-    color: #10809f;
+    color: #c;
     display: inline-block;
     padding: 0.5rem;
     transition: transform 0.3s linear;
@@ -340,13 +355,13 @@ h3 {
 }
 
 .animated-button:hover span{
-    border: 3px solid #999;
+    border: 3px solid #10809f;
     
 }
 .animated-button span{
     width: 100%;
     background-color: white;
-    border: 1px solid #999;
+    border: 1px solid #10809f;
     display: inline-block;
     height: 4px !important;
     border-radius: 2px;
@@ -411,7 +426,6 @@ h3 {
     background-color: white;
     display:inline-block;
     padding: 20px;
-    border-top: 3px solid #039be5;
 
 }
 

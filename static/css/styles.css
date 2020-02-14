@@ -441,7 +441,7 @@ h3 {
 
 .hero {
     background-image: url(/static/images/pattern.png);
-    background-size: cover;
+    background-repeat:repeat;
 }
 /* services */
 

@@ -1,0 +1,78 @@
+body {
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+#root {
+    width: 100vw;
+    height: 100vh;
+    background-color: #10809f;
+    margin: -12px;
+    padding: 0px;
+    position: relative;
+}
+
+#dot-contents {
+    width: 36px;
+    height: 36px;
+    border-radius: 18px;
+    z-index: 1;
+    background-color: #21bf73;
+}
+
+
+#dot {
+    left: 25vw;
+    top: 45vh;
+    position: absolute;
+    padding: 0px;
+    border-radius: 21px;
+    z-index: 1;
+    border: 6px solid white;
+    animation: pulse ease-in-out 2s infinite;
+}
+
+#avatar {
+    display: none;
+    position: absolute;
+    bottom: 0px;
+    left: 10vw;
+    height: 20vh;
+    width: auto;
+    animation: speaking 1.5s linear  infinite;
+}
+
+@keyframes speaking {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.125);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        padding: 0px;
+        border: 6px solid white;
+        border-radius: 21px;
+    }
+
+    50% {
+        padding: 18px;
+        border: 1px solid rgba(255,255,255,0.1);
+        border-radius: 30px;
+    
+    }
+
+    100% {
+        padding: 0px;
+        border: 6px solid white;
+        border-radius: 21px;
+    }
+}

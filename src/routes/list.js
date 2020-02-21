@@ -82,7 +82,7 @@ const Blog =(props) =>{
         <div class="hero"></div>
         <div class='hero-text'>
             <h1>GONC Blog</h1>
-            <h5>Informative, Insightful.</h5>
+            <h5>Keep your finger on the pulse of the web development world. Stay up to date with everything happening at GONC</h5>
         </div>
         <div class='latest-posts'>
             {heroPosts.map((post, i) =>(
@@ -92,12 +92,17 @@ const Blog =(props) =>{
     </section>
 
     <section>
-        <h1 style={{textAlign: 'center'}}>Post List</h1>
+        <h1 style={{textAlign: 'center'}}>Posts</h1>
+        <div class='stack-divider'>
+            <hr/>
+                <span> <i class="fas fa-star  fa-2x  "></i></span>
+            <hr/>
+        </div>
         <div class='post-container'>
-            <Filters client={client}
+            {/*<Filters client={client}
                 filterList={(arg) =>{
                     setFilters(arg)
-                }}/>
+                }}/> */}
             <div class="post-list">
                 {posts.map((post, i)=>(
                     <ListCard data={post} key={i}/>

@@ -23,12 +23,12 @@ const Post =(props) =>{
             <div className='post-hero'>
                 <img src={`${post.fields.mainImage.fields.file.url}`} alt="Blog Post Title"/>
                 <div>
-                    <div>
+                    <div class='post-header'>
                         <h1>{post.fields.title}</h1>
-                        <p>
-                            <i>{new Date(post.fields.datePosted).toDateString()}</i>
+                        <p> <i className="fas fa-clock    "></i>
+                            <i> {new Date(post.fields.datePosted).toDateString()}</i>
                         </p>
-                        <h5>By {post.fields.author.fields.name}</h5>
+                        <p><i className="fas fa-user    "></i> By {post.fields.author.fields.name}</p>
                     </div>
                 </div>
             </div>

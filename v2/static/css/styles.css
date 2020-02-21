@@ -10,27 +10,9 @@ body {
     margin: -12px;
     padding: 0px;
     position: relative;
+    overflow-y: auto;
 }
 
-#dot-contents {
-    width: 36px;
-    height: 36px;
-    border-radius: 18px;
-    z-index: 1;
-    background-color: #21bf73;
-}
-
-
-#dot {
-    left: 25vw;
-    top: 45vh;
-    position: absolute;
-    padding: 0px;
-    border-radius: 21px;
-    z-index: 1;
-    border: 6px solid white;
-    animation: pulse ease-in-out 2s infinite;
-}
 
 #avatar {
     display: none;
@@ -56,23 +38,326 @@ body {
     }
 }
 
-@keyframes pulse {
-    0% {
-        padding: 0px;
-        border: 6px solid white;
-        border-radius: 21px;
-    }
+.scene {
+    border-top: 1px solid white;
+    width: 100%;
+    height:100vh;
+    background-color: #eee;
+    position: relative;
+}
 
-    50% {
-        padding: 18px;
-        border: 1px solid rgba(255,255,255,0.1);
-        border-radius: 30px;
+/* scene 1 */
+
+#narrator {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    height: 25vh;
+    display: flex;
+    flex-direction: row;
+    animation: hide-narrator 1.5s ease-out 5s 1 forwards;
     
+}
+
+@keyframes hide-narrator{
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+#narrator-avatar {
+    height: 25vh;
+    width: auto;
+    animation: speak 1.5s linear infinite;
+}
+
+@keyframes speak{
+    0% {
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.025);
+    }
+    100%{
+        transform: scale(1);
+
+    }
+}
+
+#narrator-speech {
+    padding: 10px;
+    width: 25vw;
+    height: 12.5vh;
+    
+}
+
+.speech-bubble {
+    color: white;
+	position: relative;
+	background: #0048bd;
+    border-radius: .8em;
+    padding: 1.5rem;
+    font-family: sans-serif;
+    font-size: 1rem;
+    margin-left: 0.5rem;
+}
+
+.speech-bubble:after {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 30%;
+	width: 0;
+	height: 0;
+	border: 30px solid transparent;
+	border-right-color: #0048bd;
+	border-left: 0;
+	border-bottom: 0;
+	margin-top: -10px;
+	margin-left: -30px;
+}
+
+/* scene 2 */
+
+#plant {
+    position: absolute;
+    left: 80vw;
+    bottom: 5vh;
+}
+
+#plant img {
+    height:20vh;
+    width:auto;
+}
+
+#logo {
+    background-color: white;
+    position: absolute;
+    top: 7.5vh;
+    left:15vw;
+    padding: 12px;
+    box-shadow: 2px 4px 12px rgba(230,230,230,0.2)
+}
+
+#logo img{
+    height: 15vh;
+}
+
+#desk {
+    z-index: 1;
+    height: 40vh;
+    position: absolute;
+    left: 0px;
+    bottom:20vh;
+    display: flex;
+    flex-direction: row;
+}
+
+#desk-avatar img {
+    height: 50vh;
+}
+
+#desk-avatar-speech {
+    padding: 10px;
+    width: 20vw;
+    height: 15vh;
+
+}
+
+#elevator {
+    position: absolute;
+    left: 45vw;
+    height:100vh;
+    z-index: 0;
+    perspective: 100px;
+}
+
+/* @keyframes focus-elevator {
+    from {
+        left
     }
 
-    100% {
-        padding: 0px;
-        border: 6px solid white;
-        border-radius: 21px;
-    }
+} */
+
+#elevator img {
+    height: 100%;
+}
+
+#elevator-buttons {
+    display:flex;
+    flex-direction: column;
+    z-index: 1;
+    position: absolute;
+    left: 40vw;
+    top: 40vh;
+    background-color: white;
+    padding: 12px;
+}
+
+#elevator-buttons button {
+    margin-bottom: 8px;
+    padding: 4px;
+}
+
+#machine {
+    height: 60vh;
+    position: absolute;
+    top:35vh;
+    left:5vw;
+    display:flex;
+    flex-direction: row;
+}
+
+#machine-conveyor{
+    width: 50vw;
+}
+
+#machine-conveyor img {
+    height: 100%;
+    width: auto;
+}
+
+#machine-body img {
+    height: 100%;
+    width: auto;
+    float:right;
+}
+
+#service-description {
+    border: 1px solid #bbb;
+    border-radius: 4px;
+    padding: 12px;
+    position: absolute;
+    z-index: 1;
+    background-color:white;
+    top: 0px;
+    left: 50vw;
+}
+
+#scene-4, #scene-5 {
+    width: 100vw;
+    overflow-x: scroll;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+
+.gallery-section {
+    min-width: 60vw!important;
+    height: 100vh;
+
+}
+
+.spotlight{
+    height: 10vh;
+    width: 100%;
+    position: relative;
+}
+
+.spotlight img {
+    transform: rotateZ(180deg);
+    height: 10vh;
+    left: 75%;
+    position: absolute;
+}
+
+.gallery-image {
+    background-color:white;
+    width: 60%;
+    height: 30%;
+    box-shadow: 0px 2px 4px #999,
+                2px 6px 20px #ccc;
+    padding: 36px;
+    margin: 48px auto
+}
+
+.gallery-image img {
+    height:100%;
+}
+
+.gallery-image-label {
+    width: 180px;
+    height: 80px;
+    margin: 16px auto;
+    color:white;
+    background: brown;
+    padding: 8px;
+    
+}
+
+.gallery-bench {
+    position: absolute;
+    left: 80vw;
+    bottom: 0px;
+    perspective: 5px;
+}
+
+.gallery-bench img{
+    height: 100%;
+}
+
+#buildings {
+    position: absolute;
+    bottom: 5vh;
+    left: 25vw;
+    display: flex;
+    flex-direction: row;
+}
+
+.business {
+    display: flex;
+    flex-direction: row;
+    align-content: flex-end;
+    margin-left: -10vw;
+}
+
+.business-owner {
+    height: 30vh;
+    display: flex;
+    flex-direction: row;
+    z-index: 1;
+    margin-top:20vh;
+}
+
+.business-owner-avatar img {
+    height: 100%
+}
+
+.business-owner-speech-bubble {
+    width: 15vw;
+}
+
+.business-building {
+    height: 50vh;
+}
+
+.business-building img {
+    height: 100%
+}
+
+#street {
+    border: 2px solid black;
+    min-height: 5vh;
+}
+
+#scene-6 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#speaker {
+    display: flex;
+    flex-direction: row;
+}
+
+#speaker .speech-bubble {
+    width: 30vw;
+}
+
+#speaker img{
+    height: 50vh;
 }

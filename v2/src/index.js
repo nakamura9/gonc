@@ -12,7 +12,7 @@ class App extends React.Component{
             <Context.Provider value>
                 <React.Fragment>
             
-                    <img src="avatar.svg" alt="" srcset="" id='avatar' />
+                    <img src="/static/images/avatar.svg" alt="" srcset="" id='avatar' />
 
                 </React.Fragment>
             </Context.Provider>

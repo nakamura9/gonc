@@ -12,7 +12,7 @@ const HeroCard = (props) =>{
                 </Link>
                 <p><i>{new Date(props.data.fields.datePosted).toDateString()}</i></p>
                 <p><b>{props.data.fields.author.fields.name}</b></p>
-                <p>This is an article</p>
+                
             </div>
 
     )

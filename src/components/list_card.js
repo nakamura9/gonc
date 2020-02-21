@@ -4,7 +4,9 @@ import {Link} from 'react-router-dom'
 const ListCard = (props) =>{
     return (
         <div class="post">
-            <img src={props.data.fields.thumbnail.fields.file.url} alt="post image"/>
+            <div>
+                <img src={props.data.fields.thumbnail.fields.file.url} alt="post image"/>
+            </div>
             <div>
                 <Link to={`/post/${props.data.sys.id}`} style={{
                     textDecoration: 'none'}}>

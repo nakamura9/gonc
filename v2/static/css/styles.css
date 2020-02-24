@@ -1,12 +1,10 @@
 body {
     overflow: hidden;
     box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-svg {
-    width: 100%;
-  }
-  
+
 #root {
     width: 100vw;
     height: 100vh;
@@ -47,9 +45,8 @@ svg {
 }
 
 
-
-#scene-6 {
-    display: flex;
+#scene-2 {
+    display: block;
 }
 
 #elevator-indicator {
@@ -81,7 +78,6 @@ svg {
     left: 80%;
     
 }
-
 
 #elevator-body {
     z-index: 0;
@@ -167,7 +163,6 @@ svg {
     transition: transform 0.3s linear;
 }
 
-
 .elevator-buttons:hover i {
     transform: scale(1.25)
 }
@@ -211,9 +206,6 @@ svg {
         opacity: 0;
     }
 }
-
-
-
 
 
 @keyframes animate-desk {
@@ -267,16 +259,15 @@ svg {
 
 /* scene 1 */
 
-#narrator, 
-#news-narrator, 
-#gallery-narrator, 
-#testimonial-narrator {
+.narrator {
     position: absolute;
     bottom: 0px;
     left: 0px;
     height: 25vh;
     display: flex;
     flex-direction: row;
+    transition: opacity 1s ease-out;
+
 }
 
 @keyframes hide-narrator{
@@ -324,6 +315,7 @@ svg {
     font-family: sans-serif;
     font-size: 1rem;
     margin-left: 0.5rem;
+    z-index: 10;
 }
 
 .speech-bubble:after {
@@ -436,22 +428,27 @@ svg {
     width: 50vw;
 }
 
-#machine-conveyor svg {
+#machine-conveyor svg, #machine-conveyor img {
     height: 100%;
     width: auto;
 }
 
-#machine-body img {
+
+
+#machine-body svg,#machine-body img {
     height: 100%;
-    width: auto;
     float:right;
 }
 
-#machine-body svg {
-    height: 60vh;
-    width: 100%;
-    float:right;
-}
+#g921, #g5315, #g5315-8 {
+    transform-origin: 50% 50%;
+    transform-box: fill-box;
+  }
+
+#path857 {
+    transform-origin: 50% 25%;
+    transform-box: fill-box;
+    }
 
 #service-description {
     border: 1px solid #bbb;
@@ -461,31 +458,39 @@ svg {
     z-index: 1;
     background-color:white;
     top: 50vh;
-    left: 40vw;
+    left: 25vw;
     opacity: 0;
-    animation: expand-service 1.5s ease-out 1s 1 forwards;
+    width: 75px;
+    height:50px;
+    overflow: hidden;
 }
 
-@keyframes expand-service {
-    0%{
-        opacity: 0;
-        left: 40vw;
-        top: 50vh;
-    }
-    25%{
-        opacity: 0.5;
-        top: 25vh;
-        left: 40vw;
-    }
-    50%{
-        opacity: 1;
-        left: 65vw;
-        top: 15vh;
-    }
-    100%{
-        height: 80vh;
-        width: 30vw;
-    }
+
+.service-card {
+    height: 25vh;
+}
+
+.service-card img {
+    width: 100%;
+    height:auto
+}
+
+.service-card .card-body{
+    display:flex;
+    flex-direction: row;
+}
+
+.service-card .card-body >div:first-child{
+    flex: 1;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.service-card .card-body >div:last-child{
+    padding-left: 8px;
+    flex: 3
+
 }
 
 #scene-4, #scene-5 {
@@ -622,14 +627,13 @@ svg {
     height: 30vh;
     display: flex;
     flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
     z-index: 1;
     margin-top:20vh;
 }
 
-.business-owner-avatar {
-    display:flex;
-    flex-direction: row;
-}
+
 
 .business-owner-avatar img {
     height: 100%
@@ -861,4 +865,11 @@ svg {
 
 .post-date {
     color: #999
+}
+
+#gallery-button, #testimonial-button {
+    position: fixed;
+    left: 90vw;
+    top: 48vh;
+    z-index: 10000;
 }

@@ -10,6 +10,8 @@
   "license": "ISC",
   "dependencies": {
     "@svgdotjs/svg.js": "^3.0.16",
+    "anime": "^0.1.2",
+    "animejs": "^3.1.0",
     "babel": "^6.23.0",
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.5",

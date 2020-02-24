@@ -3,6 +3,10 @@ body {
     box-sizing: border-box;
 }
 
+svg {
+    width: 100%;
+  }
+  
 #root {
     width: 100vw;
     height: 100vh;
@@ -12,6 +16,218 @@ body {
     position: relative;
     overflow-y: auto;
 }
+
+#transition-overlay{
+    z-index: 10000;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    background-color: black;
+    opacity: 0;
+    display: none
+}
+
+#transition-overlay.transition {
+    animation: overlay-transition 2s linear 1 forwards
+}
+
+@keyframes overlay-transition {
+    0%{
+        opacity: 0;
+    }
+    25%{
+        opacity: 1;
+    }
+    75%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+
+
+#scene-6 {
+    display: flex;
+}
+
+#elevator-indicator {
+    width: 50%;
+    left: 25%;
+    top: 0;
+    position: absolute;
+    color: white;
+    text-align: center;
+}
+
+#elevator-overlay-left, #elevator-overlay-right {
+    background-color :#455A64;
+    height: 80%;
+    width: 20%;
+    position: absolute;
+    bottom: 0;
+    z-index: 2;
+    box-sizing: content-box;
+}
+
+#elevator-overlay-left{
+    left: -16px;
+    border-left: 16px solid black;
+
+} 
+#elevator-overlay-right {
+    border-right: 16px solid black;
+    left: 80%;
+    
+}
+
+
+#elevator-body {
+    z-index: 0;
+    position: absolute;
+    left: 40vw;
+    bottom: 5vh;
+    width: 40vw;
+    height: 80vh;
+    background-color: #455A64;
+    border: 24px solid black;
+    /* animation: focus-elevator 1.5s linear 1 forwards; */
+}
+
+@keyframes focus-elevator {
+    from{
+        left: 40vw;
+    }
+
+    to {
+        left: 25vw;
+        transform: scale(3)
+    }
+}
+
+#elevator-doors{
+    background-color: black;
+    width: 60%;
+    height: 80%;
+    position: absolute;
+    left: 20%;
+    bottom: 0px;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#elevator-message {
+    color: white;
+}
+
+#elevator-door-left, #elevator-door-right{
+    background-color: #B0BEC5;
+    border: 8px solid black;
+    min-height: 100%;
+    position: absolute;
+    width: 50%;
+    box-sizing: border-box;
+}
+
+.open #elevator-door-right {
+    animation: open-right-door ease-out 1s 1 .5s forwards;
+
+}
+
+.open #elevator-door-left {
+    animation: open-left-door ease-out 1s 1 .5s forwards;
+}
+
+
+#elevator-door-right {
+    left: 50%;
+}
+
+#elevator-door-left {
+    left: 0;
+}
+
+#elevator-button-group {
+    display: none;
+}
+
+.elevator-buttons:first-of-type {
+    margin-top: 10vh;
+}
+
+.elevator-buttons {
+    color: yellow;
+    text-align: center;
+    margin-bottom: .75rem;
+}
+
+.elevator-buttons i {
+    transition: transform 0.3s linear;
+}
+
+
+.elevator-buttons:hover i {
+    transform: scale(1.25)
+}
+@keyframes open-left-door {
+    from{ left: 0}
+    to { left: -40%}
+}
+
+@keyframes open-right-door {
+    from{ left: 50%}
+    to{left: 90%}
+}
+
+
+#scene-2.transition #desk{
+    animation: animate-desk 1s ease-in 1 0.75s forwards;
+}
+
+#scene-2.transition #logo{
+    animation: animate-logo .7s ease-in 1  forwards;
+}
+
+#scene-2.transition #elevator-body{
+    animation: focus-elevator 1.5s ease-in-out
+     1 1.75s forwards;
+}
+
+#scene-2.transition #elevator-message{
+    display: none;
+}
+
+
+@keyframes animate-logo {
+    from {
+        opacity: 1;
+        top: 7.5vh;
+    }
+
+    to {
+        top: -30vh;
+        opacity: 0;
+    }
+}
+
+
+
+
+
+@keyframes animate-desk {
+    from {
+        opacity: 1;
+        left: 0px;
+    }
+
+    to {
+        left: -50vw;
+        opacity: 0;
+    }
+}
+
 
 
 #avatar {
@@ -43,20 +259,24 @@ body {
     width: 100%;
     height:100vh;
     background-color: #eee;
-    position: relative;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: none
 }
 
 /* scene 1 */
 
-#narrator {
+#narrator, 
+#news-narrator, 
+#gallery-narrator, 
+#testimonial-narrator {
     position: absolute;
     bottom: 0px;
     left: 0px;
     height: 25vh;
     display: flex;
     flex-direction: row;
-    animation: hide-narrator 1.5s ease-out 5s 1 forwards;
-    
 }
 
 @keyframes hide-narrator{
@@ -68,10 +288,11 @@ body {
     }
 }
 
-#narrator-avatar {
+.narrator-avatar, #testimonial-narrator {
     height: 25vh;
     width: auto;
     animation: speak 1.5s linear infinite;
+    transition: opacity 1s ease-out;
 }
 
 @keyframes speak{
@@ -215,7 +436,7 @@ body {
     width: 50vw;
 }
 
-#machine-conveyor img {
+#machine-conveyor svg {
     height: 100%;
     width: auto;
 }
@@ -226,6 +447,12 @@ body {
     float:right;
 }
 
+#machine-body svg {
+    height: 60vh;
+    width: 100%;
+    float:right;
+}
+
 #service-description {
     border: 1px solid #bbb;
     border-radius: 4px;
@@ -233,22 +460,80 @@ body {
     position: absolute;
     z-index: 1;
     background-color:white;
-    top: 0px;
-    left: 50vw;
+    top: 50vh;
+    left: 40vw;
+    opacity: 0;
+    animation: expand-service 1.5s ease-out 1s 1 forwards;
+}
+
+@keyframes expand-service {
+    0%{
+        opacity: 0;
+        left: 40vw;
+        top: 50vh;
+    }
+    25%{
+        opacity: 0.5;
+        top: 25vh;
+        left: 40vw;
+    }
+    50%{
+        opacity: 1;
+        left: 65vw;
+        top: 15vh;
+    }
+    100%{
+        height: 80vh;
+        width: 30vw;
+    }
 }
 
 #scene-4, #scene-5 {
     width: 100vw;
     overflow-x: scroll;
-    display: flex;
+    /* display: flex; */
     flex-direction: row;
-    position: relative;
 }
+
+/* scene 5 */
+
+.fade-in {
+    animation: fade-in 1s ease-in 1 forwards;
+}
+
+.fade-out {
+    animation: fade-out 1s ease-out 1 forwards;
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fade-out {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+/* #gallery-narrator {
+    opacity: 0;
+} */
 
 .gallery-section {
     min-width: 60vw!important;
     height: 100vh;
+}
 
+.gallery-section:last-of-type {
+    padding-right: 40vw!important;
 }
 
 .spotlight{
@@ -283,8 +568,10 @@ body {
     height: 80px;
     margin: 16px auto;
     color:white;
-    background: brown;
+    background: steelblue;
     padding: 8px;
+    box-shadow: 0px 2px 4px #999,
+                2px 6px 20px #ccc;
     
 }
 
@@ -293,10 +580,19 @@ body {
     left: 80vw;
     bottom: 0px;
     perspective: 5px;
+    height: 22vh;
 }
 
 .gallery-bench img{
     height: 100%;
+}
+
+
+/* scene 5 */
+
+#testimonial-narrator-speech, #news-narrator-speech{
+    max-width: 30vw;
+    z-index: 2;
 }
 
 #buildings {
@@ -311,7 +607,15 @@ body {
     display: flex;
     flex-direction: row;
     align-content: flex-end;
-    margin-left: -10vw;
+    margin-left: 30vw;
+}
+
+.business:first-of-type {
+    margin-left: 20vw;
+}
+
+.business:last-of-type {
+    margin-right: 40vw;
 }
 
 .business-owner {
@@ -322,12 +626,20 @@ body {
     margin-top:20vh;
 }
 
+.business-owner-avatar {
+    display:flex;
+    flex-direction: row;
+}
+
 .business-owner-avatar img {
     height: 100%
 }
 
 .business-owner-speech-bubble {
-    width: 15vw;
+    min-width: 20vw;
+    min-height: 50px;
+    opacity: 0;
+    transition: opacity 0.5s linear;
 }
 
 .business-building {
@@ -343,13 +655,62 @@ body {
     min-height: 5vh;
 }
 
-#scene-6 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+
+#sun, #cloud, #cloud-3 {
+    height: 20vh;
 }
 
-#speaker {
+#sun {
+    position: fixed;
+    left: 20vw;
+    top: 5vh;
+}
+
+#cloud {
+    z-index: 1;
+    position: absolute;
+    left: 40vw;
+    top: 10vh;
+}
+
+#cloud {
+    z-index: 1;
+    position: absolute;
+    left: 40vw;
+    top: 10vh;
+}
+
+#cloud-2 {
+    z-index: 1;
+    position: absolute;
+    left: 110vw;
+    top: 5vh;
+}
+
+#cloud-3 {
+    z-index: 1;
+    position: absolute;
+    left: 180vw;
+    top: 10vh;
+}
+
+#sky {
+    height: 35vh;
+    width: 100%;
+}
+
+#cloud-2 {
+    height: 30vh;
+}
+
+#sun img, #cloud img, #cloud-3 img, #cloud-2 img{
+    height: 100%;
+}
+
+
+/* scene 6 -deleted */
+/* #speaker {
     display: flex;
     flex-direction: row;
 }
@@ -359,5 +720,145 @@ body {
 }
 
 #speaker img{
-    height: 50vh;
+    height: 50vh; 
+}*/
+
+/* SCENE  7 */
+
+#newsstand {
+    height: 75vh;
+    position: absolute;
+    left: 40vw;
+    bottom: 5vh;
+}
+
+#newsstand img, 
+#newspaper img, 
+#newspaper-open img, 
+.story img  {
+    height: 100%;
+}
+
+#newspaper {
+    height: 20vh;
+    position: absolute;
+    left: 50%;
+    bottom: 33%;
+    animation: bounce linear 1s infinite;
+}
+
+#newspaper-open.open {
+    animation: open-newspaper 1.5s ease-out 1 forwards;
+}
+
+
+@keyframes bounce{
+    0%{
+        transform: translateY(0px), scaleX(1);
+    }
+
+    50%{
+        transform: translateY(20px) scaleX(0.9);
+        
+
+    }
+
+    100%{
+        transform: translateY(0px) scaleX(1);
+    }
+}
+
+
+#newspaper-open {
+    height: 10vh;
+    position: absolute;
+    left: 55vw; /*20*/
+    top: 40vh;
+    display: none;
+    transform: rotateY(45deg);
+    
+}
+
+@keyframes open-newspaper {
+    from {
+        left: 55vw;
+        top: 40vh;
+        height: 10vh;
+        transform: rotateY(45deg);
+    } 
+    to {
+        left: 20vw;
+        top: 0vh;
+        height: 100vh;
+        transform: rotateY(0deg);
+
+    }
+}
+
+
+#newspaper-contents {
+    background-color: white;
+    position: absolute;
+    left: 135px;
+    top: 60px;
+    height: 80vh;
+    width: 410px;
+    display: none;
+}
+
+.story {
+    height: 120px;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 0.5rem;
+}
+
+.story>div:first-child {
+    flex: 1
+}
+
+.story>div:last-child {
+    flex: 3
+}
+
+
+
+.post-list {
+    flex: 3;
+    padding: 16px;
+    margin: 24px auto;
+    max-width: 900px;
+
+}
+
+.post {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 24px;
+    background-color: white;
+    padding: 12px;
+    box-shadow: 0px 2px 4px #aaa;
+    height: 120px;
+}
+
+.post img {
+    width: 100%;
+    height: auto;
+}
+
+.post div:first-child {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.post div:last-child {
+    flex: 3;
+    padding: 16px;
+
+}
+
+.post-date {
+    color: #999
 }

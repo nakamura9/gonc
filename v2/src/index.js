@@ -173,7 +173,7 @@ function sceneThreeTransition(){
         
         document.getElementById('scene-3').style.display = 'none'
         const nextScene = document.getElementById('scene-4')
-        nextScene.style.display = 'block'
+        nextScene.style.display = 'flex'
         sceneFour()
     }, 2500)
 }
@@ -260,7 +260,7 @@ function sceneFourTransition(){
         
         document.getElementById('scene-4').style.display = 'none'
         const nextScene = document.getElementById('scene-5')
-        nextScene.style.display = 'block'
+        nextScene.style.display = 'flex'
         sceneFive()
     }, 2500)
 }

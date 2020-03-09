@@ -19,6 +19,10 @@ section h1 {
     background-size: cover;
 }
 
+#print-img {
+    display: none;
+}
+
 nav {
     position: fixed;
     display: flex;
@@ -126,6 +130,7 @@ nav img {
      top: 64px;
      left: 60vw;
      box-shadow: 0px 2px 6px #aaa;
+     border-left: 6px solid #23374D;
  }
 
  #features {
@@ -483,6 +488,30 @@ footer a{
         margin: 16px;
         padding: 0px 24px;
         border-bottom: 1px solid #aaa;
+    }
+
+}
+
+@media print {
+    #nav, #contact, footer, a[href='#contact'] {
+        display: none;
+    }
+
+    #testimonials {
+        page-break-before: always;
+    }
+
+    .hero-text h1{
+        text-align: left;
+    }
+
+    #hero {
+        background-image: url('/static/images/bentsch/work.jpg');
+        background-size: cover;
+    }
+
+    .module-content {
+        margin: 36px auto;
     }
 
 }

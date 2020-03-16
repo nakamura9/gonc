@@ -103,5 +103,32 @@
     width: auto;
     margin: 2rem auto;
     display: block;
+}
 
+img.blankArticle {
+    height: 50vh;
+    width: auto;
+    display: block;
+    margin: 0px auto;
+}
+
+h2.blankArticle {
+    text-align: center;
+}
+
+.articleListHeading {
+    display: flex;
+    flex-direction:row;
+}
+
+.articleListHeading h1 {
+    flex: 1;
+    margin: 0px;
+}
+
+.articleListHeading button {
+    height: 100% !important;
+    width: 40px;
+    flex: 0;
+    border: 0px;
 }

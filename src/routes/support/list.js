@@ -17,8 +17,6 @@ const ArticleList = (props) =>{
     const [articles, setArticles] = React.useState([])
     const [currentArticle, setCurrentArticle] = React.useState('')
     React.useEffect(() =>{
-        console.log(props.category)
-        console.log(props)
         client.getEntry(props.category).then(res =>{
             console.log(res)
             setTitle(res.fields.name)
@@ -31,7 +29,10 @@ const ArticleList = (props) =>{
     return(
         <div className={styles.listContainer}>
             <div className={styles.sidebar}>
-            <h1>{title}</h1>
+            <div className={styles.articleListHeading}>
+                <h1>{title}</h1>
+                <button onClick={props.goHome}><i class="fas fa-arrow-left  fa-3x  "></i></button>
+            </div>
             <hr/>
             <ul>
                 {articles.map(article =>{
@@ -45,7 +46,10 @@ const ArticleList = (props) =>{
             </div>
             <div className={styles.articleContent}>
                 
-                {currentArticle == '' ? null : <Article article={currentArticle} />}
+                {currentArticle == '' ? <div>
+                    <img src="/static/images/bentsch/support/instruction.svg" className={styles.blankArticle}  alt=""/>
+                    <h2 className={styles.blankArticle}>Select An Article To Get Started</h2>
+                </div> : <Article article={currentArticle} />}
             </div>
         </div>
     )

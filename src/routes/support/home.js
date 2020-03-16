@@ -50,7 +50,10 @@ class Support extends Component {
                     </div>
                 :
                     <ArticleList 
-                        category={this.state.currentCategory}/>  
+                        category={this.state.currentCategory}
+                        goHome={() =>{
+                            this.setState({currentCategory: ''})
+                        }}/>  
                 }
             </div>
         )

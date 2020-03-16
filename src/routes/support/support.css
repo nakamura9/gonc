@@ -1,0 +1,107 @@
+.card {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    max-width: 192px;
+    width: 192px !important;
+    min-width: 192px !important;
+    margin:24px !important;
+    transition:transform 0.3s linear;
+    padding: 16px;
+}
+
+.card h6 {
+    margin-top:16px;
+    text-align: center;
+    font-size:1rem;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+}
+
+.card .card-body {
+    padding: 12px !important;
+}
+
+.card:hover {
+    box-shadow: 0px 2px 4px #999,
+                0px 4px 16px #ddd;
+    transform:scale(1.125)
+}
+
+
+.cardDeck {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 960px;
+    margin: 0px auto;
+}
+
+.listContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.sidebar {
+    min-width: 300px;
+    width: 25%;
+    flex: 0;
+    padding: 8px;
+    border-right: 1px solid #bbb
+}
+
+.articleLi {
+    list-style-type: none;
+    padding: 8px;
+    margin-bottom: 12px;
+    margin-right:16px;
+    transition: transform 0.3s ease-in;
+}
+
+.articleLi:hover {
+    box-shadow:  0px 2px 4px #999,
+                 0px 4px 12px #ddd;
+    transform: scale(1.125);
+    border-left: 3px solid #23374d;
+}
+
+.liFocused {
+    border-left: 3px solid #23374d;
+}
+
+.articleContent {
+    flex: 1;
+    padding: 16px;
+    max-height: 100%;
+    overflow-y: auto;
+}
+
+.articleContent p, .articleContent ol, .articleContent ul{
+    max-width: 960px;
+    margin: 1.25rem auto;
+}
+
+.articleContent li p{
+    display: inline;
+}
+
+
+.articleImg {
+    height: 40vh;
+    width: auto;
+    margin: 0px auto;
+    display: block;
+}
+
+.articleContentImg {
+    height: 25vh;
+    width: auto;
+    margin: 2rem auto;
+    display: block;
+
+}

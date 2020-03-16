@@ -4,6 +4,8 @@ import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 import Blog from './routes/list'
 import Post from './routes/post'
 import PhotoGallery from 'react-grid-gallery'
+import Support from './routes/support/home'
+import ArticleList from './routes/support/list'
 
 const App = (props) =>{
     return(
@@ -81,10 +83,15 @@ const photos = [
 ]
 const root = document.getElementById('root')
 const gallery = document.getElementById('gallery')
+const support = document.getElementById('support')
 if(root){
     ReactDOM.render(<App />, root)
 }
 if(gallery){
-    console.log('js')
     ReactDOM.render(<PhotoGallery images={photos} />, gallery)
+}
+
+
+if(support){
+    ReactDOM.render(<Support />, support)
 }

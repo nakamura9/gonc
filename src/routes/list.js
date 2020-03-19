@@ -81,8 +81,8 @@ const Blog =(props) =>{
         <section>
         <div class="hero"></div>
         <div class='hero-text'>
-            <h1>GONC Blog</h1>
-            <h5>Keep your finger on the pulse of the web development world. Stay up to date with everything happening at GONC</h5>
+            <h1>Blog</h1>
+            <h5>Be Informed. Stimulate the mind.</h5>
         </div>
         <div class='latest-posts'>
             {heroPosts.map((post, i) =>(

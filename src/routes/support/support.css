@@ -7,6 +7,7 @@
     margin:24px !important;
     transition:transform 0.3s linear;
     padding: 16px;
+    background-color: white;
 }
 
 .card h6 {
@@ -52,15 +53,15 @@
     width: 25%;
     flex: 0;
     padding: 8px;
-    border-right: 1px solid #bbb
 }
 
 .articleLi {
     list-style-type: none;
     padding: 8px;
-    margin-bottom: 12px;
+    margin-bottom: 4px;
     margin-right:16px;
     transition: transform 0.3s ease-in;
+    background-color: white;
 }
 
 .articleLi:hover {
@@ -109,7 +110,8 @@ img.blankArticle {
     height: 50vh;
     width: auto;
     display: block;
-    margin: 0px auto;
+    margin: 2rem auto;
+    opacity: 0.7
 }
 
 h2.blankArticle {
@@ -129,6 +131,33 @@ h2.blankArticle {
 .articleListHeading button {
     height: 100% !important;
     width: 40px;
+    margin-right: 40px;
     flex: 0;
     border: 0px;
+}
+
+
+.supportHero {
+    margin: 2rem auto;
+    width: 80vw;
+    text-align: center;
+    padding: 2rem 4rem;
+    background-color:white;
+    box-shadow:  0px 2px 4px #999,
+                 0px 4px 12px #ddd;
+}
+
+.article {
+    background-color:white;
+    font-size: 1.25rem;
+    padding:16px;
+    border-radius: 8px;
+    min-height:100vh;
+}
+
+@media(max-width: 575px){
+    .article img {
+        width: 100%;
+        height: auto;
+    }
 }

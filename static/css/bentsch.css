@@ -45,7 +45,7 @@ nav >span {
 
 nav li {
     display: block;
-    padding: 0px 10px;
+    padding: 4px 10px;
     /* height: 40px; */
     transition: background-color 0.3s linear;
     margin:0px;
@@ -396,6 +396,22 @@ footer a{
     color: white
 }
 
+.price {
+    font-weight: 500;
+    font-size: 2.5rem;
+}
+
+.period {
+    font-weight: 400;
+    font-size: 1rem;
+    color: #777;
+    padding-top:1.5rem;
+}
+
+
+.price-container {
+    padding: 1rem;
+}
 /* mobile */
 @media(max-width: 720px){
     .animated-button {
@@ -426,7 +442,7 @@ footer a{
         display:block;
         position: absolute;
         left: 0px;
-        top:72px;
+        top:50px;
         background-color: white;
         width: 100%;
         box-shadow: 0px 2px 4px #999,

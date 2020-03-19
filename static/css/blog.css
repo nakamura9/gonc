@@ -40,6 +40,7 @@ body {
     font-size: 1rem;
     width: 25vw;
     color: steelblue;
+    text-align: right;
 
 }
 
@@ -68,6 +69,7 @@ body {
     margin: 24px;
     box-shadow: 2px 2px 4px #999,
                 0px 4px 12px #ccc;
+    z-index: 1000;
 }
 
 .post-card img{
@@ -104,6 +106,7 @@ body {
     background-color: white;
     padding: 12px;
     box-shadow: 0px 2px 4px #aaa;
+    z-index: 1000;
 }
 
 .post img {
@@ -240,6 +243,7 @@ input {
     height: 30vh;
     background: white; 
     display: block;
+    text-align: right;
 }
 
 
@@ -247,11 +251,6 @@ input {
 .hero-text h1 {
     font-size: 2.5rem;
     line-height: 2.75rem;
-}
-
-.hero-text h5 {
-    width: 100%;
-    font-size: 1.125rem;;
 }
 
 

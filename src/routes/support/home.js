@@ -29,8 +29,13 @@ class Support extends Component {
     render(){
         return(
             <div>
-                <h1 >Bentsch Support</h1>
+                
                 {this.state.currentCategory == '' ?
+                    <div>
+                        <div className={styles.supportHero}>
+                    <h1 >Bentsch Support</h1>
+                    <p>Everything you need to know to get up to speed with Bentsch Business Tools</p>
+                    </div>
                     <div className={styles.cardDeck}>
                         {this.state.categories.map(cat =>{
                             return(
@@ -47,6 +52,8 @@ class Support extends Component {
                             )
                         })}
                         
+                    </div>
+
                     </div>
                 :
                     <ArticleList 

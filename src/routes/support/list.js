@@ -30,8 +30,8 @@ const ArticleList = (props) =>{
         <div className={styles.listContainer}>
             <div className={styles.sidebar}>
             <div className={styles.articleListHeading}>
-                <h1>{title}</h1>
                 <button onClick={props.goHome}><i class="fas fa-arrow-left  fa-3x  "></i></button>
+                <h1>{title}</h1>
             </div>
             <hr/>
             <ul>

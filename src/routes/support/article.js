@@ -32,7 +32,7 @@ const Article = (props) =>{
       })  
     },[props.article])
     return(
-        <div >
+        <div className={styles.article}>
             <img src={imgSrc}
                 className={styles.articleImg}/>
             <h3>{title}</h3>

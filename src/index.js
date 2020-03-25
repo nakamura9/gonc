@@ -196,6 +196,41 @@ const photos = [
         thumbnailHeight: 190,
         caption: 'Balance sheet report'
     },
+    {
+        src: "/static/images/bentsch/gallery/shift.png",
+        thumbnail: "/static/images/bentsch/gallery/thumbs/shift.png",
+        thumbnailWidth: 320,
+        thumbnailHeight: 171,
+        caption: 'Shift Schedule'
+    },
+    {
+        src: "/static/images/bentsch/gallery/kanban.png",
+        thumbnail: "/static/images/bentsch/gallery/thumbs/kanban.png",
+        thumbnailWidth: 320,
+        thumbnailHeight: 147,
+        caption: 'Kanban Chart'
+    },
+    {
+        src: "/static/images/bentsch/gallery/gantt.png",
+        thumbnail: "/static/images/bentsch/gallery/thumbs/gantt.png",
+        thumbnailWidth: 320,
+        thumbnailHeight: 172,
+        caption: 'Gantt Chart'
+    },
+    {
+        src: "/static/images/bentsch/gallery/logger.png",
+        thumbnail: "/static/images/bentsch/gallery/thumbs/logger.png",
+        thumbnailWidth: 320,
+        thumbnailHeight: 201,
+        caption: 'Time logger'
+    },
+    {
+        src: "/static/images/bentsch/gallery/sales activity.png",
+        thumbnail: "/static/images/bentsch/gallery/thumbs/sales activity.png",
+        thumbnailWidth: 320,
+        thumbnailHeight: 154,
+        caption: 'Sales activity report'
+    },
 ]
 const root = document.getElementById('root')
 const gallery = document.getElementById('gallery')
